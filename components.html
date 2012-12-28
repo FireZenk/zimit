@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Zimit Framework: The consistent HTML5 framework</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Zimit Framework">
+    <meta name="description" content="The consistent HTML5 framework">
+    <meta name="author" content="Jorge Garrido Oval <firezenk@gmail.com>">
+
+    <!-- Zimit -->
+    <link rel="stylesheet" type="text/css" href="css/zimit.min.css">
+    <!-- Custom style -->
+    <link rel="stylesheet" type="text/css" href="css/docs.min.css">
+    <!-- Rainbow -->
+    <link rel="stylesheet" type="text/css" href="css/vendor/rainbow.min.css">
+  </head>
+  <body>
+
+    <header class="fix">
+      <nav>
+        <a class="site" href="./index.html">Zimit Framework</a>
+
+        <input id="expand-util" type="checkbox"/>
+        <label for="expand-util"><icon class="expand">menu</icon></label>
+        
+        <ul id="menu">
+          <li><a href="started.html">Getting started</a>
+          <li><a href="design.html">Design</a>
+          <li><a href="components.html">Components</a>
+          <li><a href="goodies.html">Goodies</a>
+          <li><a href="https://github.com/FireZenk/zimit">Github</a>
+          <li><a href="downloads.html">Downloads</a>
+        </ul>
+      </nav>
+
+      <alert color="yellow"><strong>Attention!</strong> this manual still are on beta state, don't use for production for now!
+        <a data-dismiss="alert">&times</a>
+      </alert>
+    </header>
+
+    <div class="content">
+
+      <div class="row fix">
+        <div class="c3 menu-left">
+          <ul>
+            <li><a href="#typo">The Typography <icon>right</icon></a>
+            <li><a href="#code">Displaying Code <icon>right</icon></a>
+            <li><a href="#forms">Forms <icon>right</icon></a>
+            <li><a href="#buttons">Styled Buttons <icon>right</icon></a>
+            <li><a href="#tables">Responsive Tables <icon>right</icon></a>
+            <li><a href="#more">Want more? <icon>right</icon></a>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <section class="top" id="typo">
+            <h2>The Typography</h2> <h6>restyling the basis</h6>
+          </section>
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+            <li>Headings have been completely restyled to achieve a consistent style, here are some examples:
+            <h1>Heading 1</h1>
+      <pre><code data-language="html">
+      <h1>Heading 1</h1>
+      </code></pre>
+
+            <h2>Heading 2</h2>
+      <pre><code data-language="html">
+      <h2>Heading 2</h2>
+      </code></pre>
+
+            <h3>Heading 3</h3>
+      <pre><code data-language="html">
+      <h3>Heading 3</h3>
+      </code></pre>
+
+            <h4>Heading 4</h4>
+      <pre><code data-language="html">
+      <h4>Heading 4</h4>
+      </code></pre>
+
+            <h5>Heading 5</h5>
+      <pre><code data-language="html">
+      <h5>Heading 5</h5>
+      </code></pre>
+
+            <h6>Heading 6</h6>
+      <pre><code data-language="html">
+      <h6>Heading 6</h6>
+      </code></pre>
+          </p>
+
+          <p>
+            <li>Also been restyled all text elements, including new elements added in HTML5:
+            <br/><br/>
+            <p>Paragraph text element</p>
+      <pre><code data-language="html">
+      <p>Paragraph text element</p>
+      </code></pre>
+
+            <b>Sample with b</b>, <strong>Sample with strong</strong>
+      <pre><code data-language="html">
+      <b>Sample with b</b>, <strong>Sample with strong</strong>
+      </code></pre>
+
+            <i>Sample italic</i>, <cite>Sample cite</cite>, <time>11:00</time>
+      <pre><code data-language="html">
+      <i>Sample italic</i>, <cite>Sample cite</cite>, <time>11:00</time>
+      </code></pre>
+
+            <dfn>Sample definition</dfn>, <abbr title="Abreviation Sample">AS</abbr>
+      <pre><code data-language="html">
+      <dfn>Sample definition</dfn>, <abbr title="Abreviation Sample">AS</abbr>
+      </code></pre>
+
+            <em>Emphatized text</em>
+      <pre><code data-language="html">
+      <em>Emphatized text</em>
+      </code></pre>
+
+            <blockquote>Blockquote sample text</blockquote>
+      <pre><code data-language="html">
+      <blockquote>Blockquote sample text</blockquote>
+      </code></pre>
+
+            <del>Deleted sample</del>, <s>Deleted sample</s>
+      <pre><code data-language="html">
+      <del>Deleted sample</del>, <s>Deleted sample</s>
+      </code></pre>
+
+            <mark>Marked text</mark>
+      <pre><code data-language="html">
+      <mark>Marked text</mark>
+      </code></pre>
+          </p>
+
+          <p>
+            <li>Next, ordered and unordered lists
+            <br/><br/>
+
+            <ol>
+              <li>First sample text
+              <li>Second sample text
+            </ol>
+      <pre><code data-language="html">
+      <ul>
+        <li>First sample text</li>
+        <li>Second sample text</li>
+      </ul>
+      </code></pre>
+
+            <ul>
+              <li>First sample text
+              <li>Second sample text
+            </ul>
+      <pre><code data-language="html">
+      <ul>
+        <li>First sample text</li>
+        <li>Second sample text</li>
+      </ul>
+      </code></pre>
+
+          </p>
+      <br/><br/>
+          <p>
+            <li>To finish this part, have added new elements styles <code>&lt;section&gt;</code> to represent section headings:
+
+            <section>
+              <h2>Title</h2> <h6>Subttle</h6>
+              <hr/>
+            </section> 
+      <pre><code data-language="html">
+        <section>
+          <h2>Title</h2> <h6>Subttle</h6>
+          <hr/>
+        </section> 
+      </code></pre>
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <section class="top" id="code">
+            <h2>Displaying Code</h2> <h6>so sexy</6>
+          </section>
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <p>
+            Zimit incorporates consistent styles for different ways to display code: the classics <code>&lt;code&gt;</code> and <code>&lt;pre&gt;</code>, and the new ones thanks to HTML5 you will see below:<br/><br/>
+
+            <pre>some code</pre>
+      <pre><code data-language="html">
+      <pre>some code</pre>
+      </code></pre>
+
+            <code>some code</code>
+      <pre><code data-language="html">
+      &lt;code&gt;some code&lt;/code&gt;
+      </code></pre>
+           
+            <kbd>Keyboard input</kbd>
+      <pre><code data-language="html">
+      <kbd>Keyboard input</kbd>
+      </code></pre>
+
+            <samp>Sample output from computer program</samp>
+      <pre><code data-language="html">
+      <samp>Sample output from computer program</samp>
+      </code></pre>
+
+            <var>Variable</var>
+      <pre><code data-language="html">
+      <var>Variable</var>
+      </code></pre>
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <section class="top" id="forms">
+            <h2>Forms</h2>
+          </section>
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <p>
+            Following the philosophy of the framework, has styled all components with default form and giving a uniform look:<br/><br/>
+
+            Text inputs:<br/>
+            <input type="text"></input>
+            <input type="password"></input>
+            <input type="number"></input>
+      <pre><code data-language="html">
+      <input type="text"></input>
+      <input type="password"></input>
+      <input type="number"></input>
+      </code></pre>
+
+            Radio and checkbox inputs:<br/>
+            <input type="checkbox"></input>
+            <input type="radio"></input>
+      <pre><code data-language="html">
+      <input type="checkbox"></input>
+      <input type="radio"></input>
+      </code></pre>
+
+            Search input:<br/>
+            <input type="text" class="search" placeholder="Search"/>
+      <pre><code data-language="html">
+      <input type="text" class="search" placeholder="Search"/>
+      </code></pre>
+
+            Text are input:<br/>
+            <textarea cols="19" rows="2">Sample text...</textarea>
+      <pre><code data-language="html">
+      <textarea cols="19" rows="2">Sample text...</textarea>
+      </code></pre>
+
+            Text input with data-list:<br/>
+            <div class="datalist">
+              <input list="browsers"/>
+
+                <datalist id="browsers">
+                    <option value="Internet Explorer">
+                      <option value="Firefox">
+                      <option value="Chrome">
+                       <option value="Opera">
+                       <option value="Safari">
+                   </datalist>
+                <icon>down</icon> 
+            </div>
+      <pre><code data-language="html">
+      <div class="datalist">
+        <input list="browsers"/>
+
+        <datalist id="browsers">
+          <option value="Internet Explorer">
+          <option value="Firefox">
+          <option value="Chrome">
+          <option value="Opera">
+          <option value="Safari">
+        </datalist>
+        <icon>down</icon> 
+      </div>
+      </code></pre>
+
+            File upload button:
+            <div class="upload">Upload<input type="file"/> <icon>upload</icon></div>
+      <pre><code data-language="html">
+      <div class="upload">Upload<input type="file"/> <icon>upload</icon></div>
+      </code></pre>
+
+            Custom combo box:
+            <div class="select">
+              Select 
+              <select>
+                <option selected value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+              </select>
+              <icon>down</icon> 
+            </div>
+      <pre><code data-language="html">
+      <div class="select">
+        Select 
+        <select>
+          <option selected value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="opel">Opel</option>
+          <option value="audi">Audi</option>
+        </select>
+        <icon>down</icon> 
+      </div>
+      </code></pre>
+
+            The new keygen component:<br/>
+            <keygen name="security"></keygen> 
+      <pre><code data-language="html">
+      <keygen name="security"></keygen> 
+      </code></pre>
+
+            Styled fieldset:
+            <form>
+              <fieldset>
+                <legend>Personalia:</legend>
+                Name: <input type="text" size="30" /><br />
+                Email: <input type="text" size="30" /><br />
+                Date of birth: <input type="text" size="10" />
+              </fieldset>
+            </form>
+      <pre><code data-language="html">
+      <form>
+        <fieldset>
+          <legend>Personalia:</legend>
+          Name: <input type="text" size="30" /><br />
+          Email: <input type="text" size="30" /><br />
+          Date of birth: <input type="text" size="10" />
+        </fieldset>
+      </form>
+      </code></pre>
+
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <section class="top" id="buttons">
+            <h2>Styled Buttons</h2> <h6>also with icons</h6>
+          </section>
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <p>
+            According to the philosophy of the framework has been styled buttons without adding any additional class:<br/><br/>
+            
+            <button>Sample button</button>
+      <pre><code data-language="html">
+      <button>Sample button</button>
+      </code></pre>
+
+          In addition to the default button styled basic, other 9 colors available, simply add the style: <code>btn-color</code> where "color" is the desired color:<br/><br/>
+
+            <button class="btn-red">Sample button</button>
+            <button class="btn-blue">Sample button</button>
+            <button class="btn-orange">Sample button</button>
+            <button class="btn-yellow">Sample button</button>
+            <button class="btn-green">Sample button</button>
+      <pre><code data-language="html">
+      <button class="btn-red">Sample button</button>    <button class="btn-blue">Sample button</button>
+      <button class="btn-orange">Sample button</button> <button class="btn-yellow">Sample button</button>
+      <button class="btn-green">Sample button</button>
+      </code></pre>
+
+            <button class="btn-brown">Sample button</button>
+            <button class="btn-gray">Sample button</button>
+            <button class="btn-black">Sample button</button>
+            <button class="btn-white">Sample button</button>
+      <pre><code data-language="html">
+      <button class="btn-brown">Sample button</button> <button class="btn-gray">Sample button</button>
+      <button class="btn-black">Sample button</button> <button class="btn-white">Sample button</button>
+      </code></pre>
+          </p>
+          <p>
+          Also thanks to the inclusion of the set of icons <em>Ligature Symbols</em>, buttons can contain icons:<br/><br/>
+
+          <button><icon>starempty</icon> Sample button</button> <button>Sample button <icon>star</icon></button>
+      <pre><code data-language="html">
+      <button><icon>starempty</icon> Sample button</button>
+      <button>Sample button <icon>starempty</icon></button>
+      </code></pre>
+
+          Please note at this point the new element introduced by Zimit: <code>&lt;icon&gt;</code> which is used specifically to display typographical icons. See more info and details on <em>Goodies > icons</em> section.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <section class="top" id="tables">
+            <h2>Responsive Tables</h2> <h6>just amazing</h6>
+          </section>
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <p>
+            As you may have noticed, Zimit is a fully-responsive framework, and tables would not be less!
+
+            <table>
+              <thead>
+                <tr>
+                  <th>One</th><th>Two</th><th>Tree</th><th>Four</th><th>Five</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-title="One">sample column 1.1</td>
+                  <td data-title="Two">sample column 2.1</td>
+                  <td data-title="Tree">sample column 3.1</td>
+                  <td data-title="Four">sample column 4.1</td>
+                  <td data-title="Five">sample column 5.1</td>
+                </tr>
+                <tr>
+                  <td data-title="One">sample column 1.2</td>
+                  <td data-title="Two">sample column 2.2</td>
+                  <td data-title="Tree">sample column 3.2</td>
+                  <td data-title="Four">sample column 4.2</td>
+                  <td data-title="Five">sample column 5.2</td>
+                </tr>
+                <tr>
+                  <td data-title="One">sample column 1.3</td>
+                  <td data-title="Two">sample column 2.3</td>
+                  <td data-title="Tree">sample column 3.3</td>
+                  <td data-title="Four">sample column 4.3</td>
+                  <td data-title="Five">sample column 5.3</td>
+                </tr>
+                <tr>
+                  <td data-title="One">sample column 1.4</td>
+                  <td data-title="Two">sample column 2.4</td>
+                  <td data-title="Tree">sample column 3.4</td>
+                  <td data-title="Four">sample column 4.4</td>
+                  <td data-title="Five">sample column 5.4</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <pre><code data-language="html">
+    <table>
+      <thead>
+        <tr>
+          <th>One</th>
+          <th>Two</th>
+          <th>Tree</th>
+          <th>Four</th>
+          <th>Five</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-title="One">sample column 1.1</td>
+          <td data-title="Two">sample column 2.1</td>
+          <td data-title="Tree">sample column 3.1</td>
+          <td data-title="Four">sample column 4.1</td>
+          <td data-title="Five">sample column 5.1</td>
+        </tr>
+        <tr>
+          <td data-title="One">sample column 1.2</td>
+          <td data-title="Two">sample column 2.2</td>
+          <td data-title="Tree">sample column 3.2</td>
+          <td data-title="Four">sample column 4.2</td>
+          <td data-title="Five">sample column 5.2</td>
+        </tr>
+        <tr>
+          <td data-title="One">sample column 1.3</td>
+          <td data-title="Two">sample column 2.3</td>
+          <td data-title="Tree">sample column 3.3</td>
+          <td data-title="Four">sample column 4.3</td>
+          <td data-title="Five">sample column 5.3</td>
+        </tr>
+        <tr>
+          <td data-title="One">sample column 1.4</td>
+          <td data-title="Two">sample column 2.4</td>
+          <td data-title="Tree">sample column 3.4</td>
+          <td data-title="Four">sample column 4.4</td>
+          <td data-title="Five">sample column 5.4</td>
+        </tr>
+      </tbody>
+    </table>
+            </code></pre>
+
+            I invite you to change the size of the window and observe what happens to the table.<br/>
+            Sure you have seen that each <code>&lt;td&gt;</code> has an attribute called <var>data-title</var>, this is used for the title of his line when the window is very small.<br/>
+            The attribute <var>data-title</var> is optional but highly recommended.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <section class="top" id="more">
+            <h2>Whant more?</h2> <h6>goodies!</h6>
+          </section>
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <p>
+            Zimit is a complete framework for prototyping web sites and  web applications and therefore have designed many custom components to provide consistent and robust experience sought.<br/><br/>
+            Want to know more? jump to: <a href="goodies.html"><button>Goodies <icon>external</icon></button></a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <br/><br/>
+
+    <footer>
+      <div class="row">
+        <div class="c10">
+          <p>Zimit Framework, Copyright &copy; 2012 <a href="">Jorge Garrido Oval</a>, licensed under MIT license</p>
+        </div>
+        <div class="c2"><a href="#">Back to top ↑</a></div>
+      </div>
+    </footer>
+
+    <!-- Rainbow -->
+    <script type="text/javascript" src="js/vendor/rainbow-custom.min.js"></script>
+  </body>
+</html>
