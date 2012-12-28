@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Zimit Framework: The consistent HTML5 framework</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Zimit Framework">
+    <meta name="description" content="The consistent HTML5 framework">
+    <meta name="author" content="Jorge Garrido Oval <firezenk@gmail.com>">
+
+    <!-- Zimit -->
+    <link rel="stylesheet" type="text/css" href="css/zimit.min.css">
+    <!-- Custom style -->
+    <link rel="stylesheet" type="text/css" href="css/docs.min.css">
+    <!-- Rainbow -->
+    <link rel="stylesheet" type="text/css" href="css/vendor/rainbow.min.css">
+  </head>
+  <body>
+
+    <header class="fix">
+      <nav>
+        <a class="site" href="./index.html">Zimit Framework</a>
+
+        <input id="expand-util" type="checkbox"/>
+        <label for="expand-util"><icon class="expand">menu</icon></label>
+        
+        <ul id="menu">
+          <li><a href="started.html">Getting started</a>
+          <li><a href="design.html">Design</a>
+          <li><a href="components.html">Components</a>
+          <li><a href="goodies.html">Goodies</a>
+          <li><a href="https://github.com/FireZenk/zimit">Github</a>
+          <li><a href="downloads.html">Downloads</a>
+        </ul>
+      </nav>
+
+      <alert color="yellow"><strong>Attention!</strong> this manual still are on beta state, don't use for production for now!
+        <a data-dismiss="alert">&times</a>
+      </alert>
+    </header>
+
+    <div class="content">
+
+      <div class="row fix">
+        <div class="c3 menu-left">
+          <ul>
+            <li><a href="#general">General <icon>right</icon></a>
+            <li><a href="#grid">Grid <icon>right</icon></a>
+            <li><a href="#more">More <icon>right</icon></a>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="c9 o3">
+          <section class="top" id="general">
+            <h2>General</h2> <h6>uniform design</h6>
+          </section>
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <p>
+            Zimit Framework provides a comprehensive and consistent style.<br/>
+            Based on <var>normalize.css</var> and with the addtion of some more <var>resets</var>, this homogeneity is achieved by all browsers.
+          </p>
+          <p>
+            Keep in mind that Zimit Framework is a <b>fully HTML5 framework</b> and therefore will only be compatible with modern browsers, but this support can be extended with the use of external javascripts.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <section id="grid">
+            <h2>Grid</h2> <h6>a responsive system</h6>
+          </section>
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <p>
+            The <i>responsive design</i> of Zimit Framework is based on a 12 columns <var>960px</var> grid with their margins.<br/>
+            This design makes Zimit Framework simple and adaptable to any device.
+          </p>
+          <img src="img/grid.png" />
+          <p>
+            Now we will see how to create the basic structure of the grid and its various possibilities.<br/>
+            First a simple 2 symmetrical column grid:
+          </p>
+
+          <div class="row">
+            <div class="c4" style="background:rgba(255, 0, 0, 0.5)">4 columns</div>
+            <div class="c4" style="background:rgba(255, 0, 0, 0.5)">4 columns</div>
+          </div>
+
+          <pre><code data-language="html">
+            <div class="row">
+              <div class="c4">4 columns</div>
+              <div class="c4">4 columns</div>
+            </div>
+          </code></pre>
+
+          <p>
+            Now a full size single column:
+          </p>
+
+          <div class="row">
+            <div class="c12" style="background:rgba(255, 0, 0, 0.5)">12 columns</div>
+          </div>
+
+          <pre><code data-language="html">
+            <div class="row">
+              <div class="c12">12 columns</div>
+            </div>
+          </code></pre>
+
+          <p>
+            You can place the columns with an offset
+          </p>
+
+          <div class="row">
+            <div class="c7 o2" style="background:rgba(255, 0, 0, 0.5)">7 columns with 2 offset</div>
+          </div>
+          <div class="row">
+            <div class="c4 o1" style="background:rgba(255, 0, 0, 0.5)">4 columns with 1 offset</div>
+          </div>
+
+          <pre><code data-language="html">
+            <div class="row">
+              <div class="c7 o2">7 columns with 2 offset</div>
+            </div>
+            <div class="row">
+              <div class="c4 o1">4 columns with 1 offset</div>
+            </div>
+          </code></pre>
+
+          <p>
+            You can also nest columns:
+          </p>
+
+          <div class="row">
+            <div class="c12" style="background:rgba(255, 0, 0, 0.5)">
+              <div class="row">
+                 <div class="c4" style="background:#87CEFA">4 columns</div>
+                 <div class="c4" style="background:#87CEFA">4 columns</div>
+              </div>
+              <div class="row">
+                <div class="c4" style="background:#87CEFA">4 columns</div>
+                <div class="c4" style="background:#87CEFA">4 columns</div>
+              </div>
+            </div>
+          </div>
+
+          <pre><code data-language="html">
+            <div class="row">
+              <div class="c12">
+                <div class="row">
+                  <div class="c4">4 columns</div>
+                  <div class="c4">4 columns</div>
+                </div>
+                <div class="row">
+                  <div class="c4">4 columns</div>
+                  <div class="c4">4 columns</div>
+                </div>
+              </div>
+            </div>
+          </code></pre>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <section id="more">
+            <h2>More</h2> <h6>let's learn more things</h6>
+          </section>
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <p>
+            At this point you know how to use the tools provided by Zimit Framework for your own layout based on the grid.
+            Now you can go deeper on the framework and all its components or review the basics:
+          </p>
+          <a href="docs/"><button class="btn-blue">Go to component docs <icon>external</icon></button></a>
+          <a href="#"><button class="btn-green">Go to downloads <icon>external</icon></button></a>
+        </div>
+      </div>
+
+    </div>
+
+    <br/><br/>
+
+    <footer>
+      <div class="row">
+        <div class="c10">
+          <p>Zimit Framework, Copyright &copy; 2012 <a href="">Jorge Garrido Oval</a>, licensed under MIT license</p>
+        </div>
+        <div class="c2"><a href="#">Back to top ↑</a></div>
+      </div>
+    </footer>
+
+    <!-- Rainbow -->
+    <script type="text/javascript" src="js/vendor/rainbow-custom.min.js"></script>
+  </body>
+</html>
