@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Zimit Framework: The consistent HTML5 framework</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Zimit Framework">
+    <meta name="description" content="The consistent HTML5 framework">
+    <meta name="author" content="Jorge Garrido Oval <firezenk@gmail.com>">
+
+    <!-- Zimit -->
+    <link rel="stylesheet" type="text/css" href="css/zimit.min.css">
+    <!-- Custom style -->
+    <link rel="stylesheet" type="text/css" href="css/docs.min.css">
+    <!-- Rainbow -->
+    <link rel="stylesheet" type="text/css" href="css/vendor/rainbow.min.css">
+  </head>
+  <body>
+
+    <header class="fix">
+      <nav>
+        <a class="site" href="./index.html">Zimit Framework</a>
+
+        <input id="expand-util" type="checkbox"/>
+        <label for="expand-util"><icon class="expand">menu</icon></label>
+        
+        <ul id="menu">
+          <li><a href="started.html">Getting started</a>
+          <li><a href="design.html">Design</a>
+          <li><a href="components.html">Components</a>
+          <li><a href="goodies.html">Goodies</a>
+          <li><a href="https://github.com/FireZenk/zimit">Github</a>
+          <li><a href="downloads.html">Downloads</a>
+        </ul>
+      </nav>
+
+      <alert color="yellow"><strong>Attention!</strong> this manual still are on beta state, don't use for production for now!
+        <a data-dismiss="alert">&times</a>
+      </alert>
+    </header>
+
+    <div class="content">
+
+      <div class="row fix">
+        <div class="c3 menu-left">
+          <ul>
+            <li><a href="#download">Download <icon>right</icon></a>
+            <li><a href="#structure">Structure <icon>right</icon></a>
+            <li><a href="#template">Template <icon>right</icon></a>
+            <li><a href="#custom">Customization <icon>right</icon></a>
+            <li><a href="#more">More <icon>right</icon></a>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="c9 o3">
+          <section class="top" id="download">
+            <h2>Download</h2> <h6>get Zimit Framework!</h6>
+          </section>
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <p>
+          Zimit Framework is available in 3 different flavors depending on your needs or the use you're going to give:
+          <br/>
+          For basic usage is recommended only minified css file, which comes with everything you need to start building your site.
+          <br/>
+          If you also want to prepare your site for validation, we recommend using the css file that includes debug directives.
+          <br/>
+          And if you want to play with the original files, simply download a file with all of it or make a clone our Github repository.
+          </p>
+          <a href="css/zimit.min.css"><button class="btn-orange">Only CSS minified file</button></a>
+          <a href="css/zimit.debug.min.css"><button class="btn-yellow">CSS + Debug minified file</button></a>
+          <a href="https://github.com/FireZenk/zimit/downloads"><button class="btn-blue">Complete framework</button></a>
+          <p>
+          More options available on: <a href="downloads.html"><button class="btn-gray">Downloads section <icon>external</icon></button></a>
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <section id="structure">
+            <h2>Structure</h2> <h6>what's included</h6>
+          </section>
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <p>
+            Here you will see the structure of the full distribution of Zimit Framework.
+          </p>
+
+          <ol class="tree">
+            <li>
+                <label for="subfolder1"><icon>folder</icon> css</label>
+                <input type="checkbox" id="subfolder1" />
+                <ol>
+                    <li class="file"><icon>file</icon> <a href="">zimit.css</a></li>
+                    <li class="file"><icon>file</icon> <a href="">zimit.min.css</a></li>
+                    <li class="file"><icon>file</icon> <a href="">custom.css</a></li>
+                </ol>
+            </li>
+
+            <li>
+              <label for="subfolder2"><icon>folder</icon> docs</label>
+              <input type="checkbox" id="subfolder2" />
+              <ol>
+                <li class="file"><icon>folder</icon> <a href="">other</a></li>
+                <li class="file"><icon>file</icon> <a href="">index.html</a></li>
+              </ol>
+            </li>
+
+            <li>
+              <label for="subfolder3"><icon>folder</icon> less</label>
+              <input type="checkbox" id="subfolder3" />
+              <ol>
+                <li class="file"><icon>file</icon> <a href="">bars.less</a></li>
+                <li class="file"><icon>file</icon> <a href="">components.less</a></li>
+                <li class="file"><icon>file</icon> <a href="">debug.less</a></li>
+                <li class="file"><icon>file</icon> <a href="">fonts.less</a></li>
+                <li class="file"><icon>file</icon> <a href="">icons.less</a></li>
+                <li class="file"><icon>file</icon> <a href="">normalize.less</a></li>
+                <li class="file"><icon>file</icon> <a href="">notifications.less</a></li>
+                <li class="file"><icon>file</icon> <a href="">responsive.less</a></li>
+                <li class="file"><icon>file</icon> <a href="">skeleton.less</a></li>
+                <li class="file"><icon>file</icon> <a href="">utils.less</a></li>
+                <li class="file"><icon>file</icon> <a href="">variables.less</a></li>
+                <li class="file"><icon>file</icon> <a href="">zimit.less</a></li>
+              </ol>
+            </li>
+
+            <li class="file"><icon>file</icon> index.html</li>
+            <li class="file"><icon>file</icon> 404.html</li>
+            <li class="file"><icon>file</icon> robots.txt</li>
+            <li class="file"><icon>file</icon> human.txt</li>
+          </ol>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <section id="template">
+            <h2>Template</h2> <h6>a place to start</h6>
+          </section>
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <p>
+            Great, you already have the necessary files and know your organization.
+            Now you just need a good starting point, therefore, this is the basic structure to follow when starting a new page built with Zimit Framework.
+          </p>
+
+          <pre><code data-language="html">
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+              &lt;head&gt;
+                &lt;meta charset="utf-8"&gt;
+                &lt;title>Your title here&lt;/title&gt;
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                &lt!-- Zimit --&gt;
+                &lt;link rel="stylesheet" type="text/css" href="css/zimit.min.css"&gt;
+                &lt!-- Custom style --&gt;
+                &lt;link rel="stylesheet" type="text/css" href="css/custom.css"&gt;
+              &lt;/head>
+              &lt;body>
+                &lt;header&gt;
+                  Your header content here
+                &lt;/header&gt;
+                &lt;div class="content"&gt;
+                  Your main content here
+                &lt;/div&gt;
+                &lt;footer&gt;
+                  Your footer content here
+                &lt;/footer&gt;
+              &lt;/body&gt;
+            &lt;/html&gt;
+          </code></pre>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <section id="custom">
+            <h2>Customization</h2> <h6>customize your Zimit distribution</h6>
+          </section>
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <p>
+          This part is for advanced users who know the language of LESS preprocessor.<br/>
+          The Framework Zimit structure greatly facilitates the way to customize the colors of it.
+          You only have to edit the file <var>variables.less</var> where you will find all colors and sizes subsceptibles of change.
+          </p>
+
+          <var>variables.less</var>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <section id="more">
+            <h2>More</h2> <h6>let's learn more things</h6>
+          </section>
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <p>
+            Okay, you have everything you need to begin a amazing web based Zimit Framework, 
+            but if you want to squeeze the maximum power of this framework, 
+            I recommend you take a look at the documentation:
+          </p>
+          <a href="design.html"><button class="btn-gray">Go to design docs <icon>external</icon></button></a>
+          <a href="docs/"><button class="btn-blue">Go to component docs <icon>external</icon></button></a>
+        </div>
+      </div>
+
+    </div>
+
+    <br/><br/>
+
+    <footer>
+      <div class="row">
+        <div class="c10">
+          <p>Zimit Framework, Copyright &copy; 2012 <a href="">Jorge Garrido Oval</a>, licensed under MIT license</p>
+        </div>
+        <div class="c2"><a href="#">Back to top ↑</a></div>
+      </div>
+    </footer>
+
+    <!-- Rainbow -->
+    <script type="text/javascript" src="js/vendor/rainbow-custom.min.js"></script>
+  </body>
+</html>
