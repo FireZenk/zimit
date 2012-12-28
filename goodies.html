@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Zimit Framework: The consistent HTML5 framework</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Zimit Framework">
+    <meta name="description" content="The consistent HTML5 framework">
+    <meta name="author" content="Jorge Garrido Oval <firezenk@gmail.com>">
+
+    <!-- Zimit -->
+    <link rel="stylesheet" type="text/css" href="css/zimit.min.css">
+    <!-- Custom style -->
+    <link rel="stylesheet" type="text/css" href="css/docs.min.css">
+    <!-- Rainbow -->
+    <link rel="stylesheet" type="text/css" href="css/vendor/rainbow.min.css">
+  </head>
+  <body>
+
+    <header class="fix">
+      <nav>
+        <a class="site" href="./index.html">Zimit Framework</a>
+
+        <input id="expand-util" type="checkbox"/>
+        <label for="expand-util"><icon class="expand">menu</icon></label>
+        
+        <ul id="menu">
+          <li><a href="started.html">Getting started</a>
+          <li><a href="design.html">Design</a>
+          <li><a href="components.html">Components</a>
+          <li><a href="goodies.html">Goodies</a>
+          <li><a href="https://github.com/FireZenk/zimit">Github</a>
+          <li><a href="downloads.html">Downloads</a>
+        </ul>
+      </nav>
+
+      <alert color="yellow"><strong>Attention!</strong> this manual still are on beta state, don't use for production for now!
+        <a data-dismiss="alert">&times</a>
+      </alert>
+    </header>
+
+    <div class="content">
+
+      <div class="row fix">
+        <div class="c3 menu-left">
+          <ul>
+            <li><a href="#navigation">Navigation <icon>right</icon></a>
+            <li><a href="#messaging">Messaging <icon>right</icon></a>
+            <li><a href="#containers">Dynamic containers <icon>right</icon></a>
+            <li><a href="#image">Image utils <icon>right</icon></a>
+            <li><a href="#bars">Bars <icon>right</icon></a>
+            <li><a href="#other">Other utils <icon>right</icon></a>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <section class="top" id="navigation">
+            <h2>Navigation</h2>
+          </section>
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <p>
+          Zimit has several components to meet the navigation requirements of any type.<br/>
+          <br/>
+          <b>Nav:</b><br/>
+          The main component for the navigation is the new element <code>&lt;nav&gt;</code>, which is fully adapted to the philosophy of the framework:
+
+            <nav>
+              <a class="site">Site name</a>
+
+              <input id="expand-util" type="checkbox"/>
+              <label for="expand-util"><icon class="expand">menu</icon></label>
+
+              <ul id="menu">
+                  <li><a>Section 1</a>
+                  <li><a>Section 2</a>
+                  <li><a>Section 3</a>
+              </ul>
+            </nav>
+
+      <pre><code data-language="html">
+      <nav>
+        <a class="site">Site name</a>
+
+        <input id="expand-util" type="checkbox"/>
+        <label for="expand-util"><icon class="expand">menu</icon></label>
+
+        <ul id="menu">
+          <li><a>Section 1</a>
+          <li><a>Section 2</a>
+          <li><a>Section 3</a>
+        </ul>
+      </nav>
+      </code></pre>
+
+        <b>Menu:</b><br/>
+        Menu is a new HTML5 element designed specifically to design menus native-like applications and easily understood by users:<br/><br/>
+
+          <menu type="toolbar">
+            <command type="command" label="New">New</command>
+            <command type="command" label="Save">Save</command>
+            <command type="command" label="Edit">Edit</command>
+            <command type="command" label="Delete">Delete</command>
+          </menu>
+
+      <pre><code data-language="html">
+      <menu type="toolbar">
+        <command type="command" label="New">New</command>
+        <command type="command" label="Save">Save</command>
+        <command type="command" label="Edit">Edit</command>
+        <command type="command" label="Delete">Delete</command>
+      </menu>
+      </code></pre>
+
+      <b>Breadcrumb:</b><br/>
+      Custom element created for Zimit Framework designed to represent hierarchical navigation<br/>
+      <tag color="orange">Option</tag> you also can use <code>&lt;ul&gt;</code> instead <code>&lt;breadcrumb&gt;</code><br/>
+      <br/>
+          <breadcrumb>
+            <li><a href="#">Grandparent</a></li>
+            <li><a href="#">Parent</a></li>
+            <li><a href="#">Child</a></li>
+            <li><a href="#">Grandchild</a></li>
+            <li><a href="#">Great-Grandchild</a></li>
+          </breadcrumb>
+
+      <pre><code data-language="html">
+      <breadcrumb>
+        <li><a href="#">Grandparent</a></li>
+        <li><a href="#">Parent</a></li>
+        <li><a href="#">Child</a></li>
+        <li><a href="#">Grandchild</a></li>
+        <li><a href="#">Great-Grandchild</a></li>
+      </breadcrumb>
+      </code></pre> 
+
+      <b>Dropdowns:</b><br/>
+      Dropdown menus by Zimit Framework designed for intuitive navigation in hierarchical links.<br/>
+      <tag color="green">Config</tag> use <code>class="left"</code> on any <var>drop</var> class to invert the dropdown position.
+
+        <ul class="dropdown">
+          <li><a class="drop" href="#">Parent</a>
+            <ul>
+              <li><a href="#">Chlid 1</a></li>
+              <li><a class="drop" href="#">Parent</a>
+                <ul><!-- or class="left" -->
+                  <li><a href="#">Second-Chlid 1</a></li>
+                  <li><a href="#">Second-Chlid 2</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+      <pre style="margin-top:140px"><code data-language="html">
+        <ul class="dropdown">
+          <li><a class="drop" href="#">Parent</a>
+            <ul>
+              <li><a href="#">Chlid 1</a></li>
+              <li><a class="drop" href="#">Parent</a>
+                <ul><!-- or class="left" -->
+                  <li><a href="#">Second-Chlid 1</a></li>
+                  <li><a href="#">Second-Chlid 2</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </code></pre> 
+
+      <b>Tree:</b><br/>
+      Custom component to navigate across file/folder trees.<br/>
+      <tag color="orange">Option</tag> you can also use <code>&lt;ol&gt;</code> with <code>class="tree"</code>
+
+          <ol class="tree">
+            <li>
+                <label for="subfolder1"><icon>folder</icon> Folder 1</label>
+                <input type="checkbox" id="subfolder1" />
+                <ol>
+                    <li class="file"><icon>file</icon> <a href="">File 2</a></li>
+                    <li class="file"><icon>file</icon> <a href="">File 2</a></li>
+                    <li class="file"><icon>file</icon> <a href="">File 2</a></li>
+                    <li>
+                        <label for="subfolder2"><icon>folder</icon> Folder 2</label>
+                        <input type="checkbox" id="subfolder2" />
+                        <ol>
+                            <li class="file"><icon>file</icon> <a href="">File 3</a></li>
+                            <li class="file"><icon>file</icon> <a href="">File 3</a></li>
+                            <li class="file"><icon>file</icon> <a href="">File 3</a></li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+            <li class="file"><icon>file</icon> File 1</li>
+            <li class="file"><icon>file</icon> File 1</li>
+          </ol>
+
+      <pre><code data-language="html">
+      <tree>
+        <li>
+          <label for="subfolder1"><icon>folder</icon> Folder 1</label>
+          <input type="checkbox" id="subfolder1" />
+          <ol>
+            <li class="file"><icon>file</icon> <a href="">File 2</a></li>
+            <li class="file"><icon>file</icon> <a href="">File 2</a></li>
+            <li class="file"><icon>file</icon> <a href="">File 2</a></li>
+            <li>
+              <label for="subfolder2"><icon>folder</icon> Folder 2</label>
+              <input type="checkbox" id="subfolder2" />
+              <ol>
+                <li class="file"><icon>file</icon> <a href="">File 3</a></li>
+                <li class="file"><icon>file</icon> <a href="">File 3</a></li>
+                <li class="file"><icon>file</icon> <a href="">File 3</a></li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+        <li class="file"><icon>file</icon> File 1</li>
+        <li class="file"><icon>file</icon> File 1</li>
+      </tree>
+      </code></pre> 
+
+      <b>Pagination:</b><br/>
+      A quick and convenient solution to represent page navigation.<br/>
+      <br/>
+            <ul class="pagination">
+              <li class="prev"><a href="">&laquo;</a></li>
+              <li class="current"><a href="">1</a></li>
+              <li><a href="">2</a></li>
+              <li><a href="">3</a></li>
+              <li><a href="">4</a></li>
+              <li><a href="">&hellip;</a></li>
+              <li><a href="">12</a></li>
+              <li><a href="">13</a></li>
+              <li class="next"><a href="">&raquo;</a></li>
+            </ul>
+
+      <pre><code data-language="html">
+      <ul class="pagination">
+        <li class="prev"><a href="">&laquo;</a></li>
+        <li class="current"><a href="">1</a></li>
+        <li><a href="">2</a></li>
+        <li><a href="">3</a></li>
+        <li><a href="">4</a></li>
+        <li><a href="">&hellip;</a></li>
+        <li><a href="">12</a></li>
+        <li><a href="">13</a></li>
+        <li class="next"><a href="">&raquo;</a></li>
+      </ul>
+      </code></pre> 
+
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <section class="top" id="messaging">
+            <h2>Messaging</h2>
+          </section>
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <p>
+            The communication of information to the user is essential and therefore Zimit Framework includes various types of messages to give the user information by importance and visibility.<br/>
+            <br/>
+            <b>Alert:</b><br/>
+            Sometimes you need to show important info to the user, the <var>alert</var> are one of the best ways to do it. 
+            They also have the option to close.<br/>
+            <tag color="orange">Option</tag> also you can use <code>&lt;span&gt;</code> instead <code>&lt;alert&gt;</code><br/>
+            <tag color="green">Config</tag> you can select the color using the custom attribute <code>color=""</code> or <code>class="alert-color"</code><br/> 
+            <tag color="blue">Extra</tag> may require some js or extra css to close the alert.<br/>
+            <br/>
+            <alert color="red" data-dismiss="alert">
+              <strong>Red alert!</strong> Alert message text <a href="#">&times;</a>
+            </alert>
+
+      <pre><code data-language="html">
+        <alert class="c7" color="red" data-dismiss="alert">
+          <strong>Red alert!</strong> Alert message text <a href="#">&times;</a>
+        </alert>
+      </code></pre> 
+
+            <b>Modal:</b><br/>
+            Modal component that shows full-screen messages.<br/>
+            <tag color="orange">Option</tag> Also you can use <code>&lt;div&gt;</code> instead <code>&lt;modal&gt;</code><br/>
+            <br/>
+            <a href="#open"><button><icon>forward</icon> Open modal</button></a>
+        <modal id="open">
+        <div>
+          <div class="title">
+            Modal message
+            <a href="#close" class="close">&times;</a>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Proin molestie, justo a fermentum placerat, nisi metus consectetur metus, 
+            vel aliquet massa neque sit amet ipsum. Vestibulum non dolor turpis. 
+            Fusce convallis odio vitae orci commodo consectetur.
+          </p>
+          <div class="commands">
+            <button class="btn-green" type="submit">Ok</button>
+            <button class="btn-gray">Cancel</button>
+          </div>
+        </div>
+      </modal>
+
+      <pre><code data-language="html">
+      <modal id="open">
+        <div>
+          <div class="title">
+            Modal message
+            <a href="#close" class="close">&times;</a>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Proin molestie, justo a fermentum placerat, nisi metus consectetur metus, 
+            vel aliquet massa neque sit amet ipsum. Vestibulum non dolor turpis. 
+            Fusce convallis odio vitae orci commodo consectetur.
+          </p>
+          <div class="commands">
+            <button class="btn-green" type="submit">Ok</button>
+            <button class="btn-gray">Cancel</button>
+          </div>
+        </div>
+      </modal>
+      </code></pre> 
+
+          <b>Notifications:</b><br/>
+          Zimit incorporates notifications similar to those of some desktop applications.<br/>
+          Notifications have a maximum time.<br/>
+          <tag color="green">Config</tag> you can select the color using <code>class="notif-color"</code><br/> 
+          <br/> 
+          Click to show <input type="checkbox" class="notification-start" />
+          <div class="notification notif-red">
+            <span class="lsf">save</span>
+            <p>This is a dynamic notification, using only Pure CSS</p>
+            <div class="progress"></div>
+            <a href="#">&times;</a>
+          </div>
+
+      <pre><code data-language="html">
+      <div class="notification notif-red">
+        <span class="lsf">save</span>
+        <p>This is a dynamic notification, using only Pure CSS</p>
+        <div class="progress"></div>
+        <a href="#">&times;</a>
+      </div>
+      </code></pre> 
+
+          <b>Tooltips:</b><br/>
+          The tooltips give extra information to the user if goes over the element with tooltip.<br/>
+          <br/>
+          <a class="tooltip" href="#" data-details="Sample tooltip text">Tooltip</a>
+
+      <pre><code data-language="html">
+        <a class="tooltip" href="#" data-details="Sample tooltip text">Tooltip</a>
+      </code></pre> 
+
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <section class="top" id="containers">
+            <h2>Dynamic containers</h2>
+          </section>
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <p>
+            Sometimes was looking to sort the contents of a form that highlights or is showy to the user, for it, Zimit Framework has some components.<br/>
+            <br/>
+            <b>Panels:</b><br/>
+            The panels are a simple and great way to highlight content.<br/>
+            <tag color="orange">Option</tag> Also you can use <code>&lt;div class="panel"&gt;</code> instead <code>&lt;panel&gt;</code><br/>
+            <div class="panel">
+              <p class="title">Sample title</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Integer vulputate turpis a turpis consectetur euismod. 
+                Sed sit amet quam et eros dignissim euismod.
+              </p>
+            </div>
+
+      <pre><code data-language="html">
+      <panel class="c4">
+        <p class="title">Sample title</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Integer vulputate turpis a turpis consectetur euismod. 
+          Sed sit amet quam et eros dignissim euismod.
+        </p>
+      </panel>
+      </code></pre> 
+
+            <b>Tabs:</b><br/>
+            The tabs are popular at the time of ordering content.<br/>
+            Zimit Framework incorporates tabs attractive to the user and easy to implement.<br/>
+            <tag color="orange">Option</tag> Also you can use <code>&lt;div&gt;</code> instead <code>&lt;tab-host&gt;</code> and <code>&lt;tab&gt;</code><br/>
+
+            <tab-host>
+             <tab>
+                 <input type="radio" id="tab-1" name="tab-group-1" checked>
+                 <label for="tab-1">Tab One</label>
+                 <div class="tab-content">
+                     content 1
+                 </div> 
+             </tab>
+             <tab>
+                 <input type="radio" id="tab-2" name="tab-group-1">
+                 <label for="tab-2">Tab Two</label>
+                 <div class="tab-content">
+                     content 2
+                 </div> 
+             </tab>
+              <tab>
+                 <input type="radio" id="tab-3" name="tab-group-1">
+                 <label for="tab-3">Tab Three</label>
+                 <div class="tab-content">
+                     content 3
+                 </div> 
+             </tab>
+            </tab-host>
+
+      <pre><code data-language="html">
+      <tab-host>
+       <tab>
+           <input type="radio" id="tab-1" name="tab-group-1" checked>
+           <label for="tab-1">Tab One</label>
+           <div class="tab-content">
+               content 1
+           </div> 
+       </tab>
+       <tab>
+           <input type="radio" id="tab-2" name="tab-group-1">
+           <label for="tab-2">Tab Two</label>
+           <div class="tab-content">
+               content 2
+           </div> 
+       </tab>
+        <tab>
+           <input type="radio" id="tab-3" name="tab-group-1">
+           <label for="tab-3">Tab Three</label>
+           <div class="tab-content">
+               content 3
+           </div> 
+       </tab>
+      </tab-host>
+      </code></pre> 
+
+            <b>Accordions:</b><br/>
+            Accordions are a popular way to show content, because they only show part of it depending on user preference.<br/>
+            <tag color="orange">Option</tag> Also you can use <code>&lt;div&gt;</code> instead <code>&lt;accordion&gt;</code><br/>
+
+            <accordion>
+              <div>
+                  <input id="ac-1" name="accordion-1" type="checkbox" checked/>
+                  <label for="ac-1">One</label>
+                  <article>
+                      <p>
+                          En un lugar de la Mancha, de cuyo nombre no quiero acordarme, 
+                          no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero, 
+                          adarga antigua, rocín flaco y galgo corredor.
+                      </p>
+                  </article>
+              </div>
+              <div>
+                  <input id="ac-2" name="accordion-1" type="checkbox"/>
+                  <label for="ac-2">Two</label>
+                  <article>
+                      <p>
+                          Una olla de algo más vaca que carnero, salpicón las más noches, 
+                          duelos y quebrantos los sábados, lantejas los viernes, algún palomino de añadidura los domingos, 
+                          consumían las tres partes de su hacienda.
+                      </p>
+                  </article>
+              </div>
+              <div>
+                  <input id="ac-3" name="accordion-1" type="checkbox" />
+                   <label for="ac-3">Three</label>
+                  <article>
+                      <p>
+                          El resto della concluían sayo de velarte, calzas de velludo para las fiestas, 
+                          con sus pantuflos de lo mesmo, y los días de entresemana se honraba con su vellorí de lo más fino.
+                      </p>
+                  </article>
+              </div>
+          </accordion>
+
+      <pre><code data-language="html">
+      <accordion>
+        <div>
+            <input id="ac-1" name="accordion-1" type="checkbox" checked/>
+            <label for="ac-1">One</label>
+            <article>
+                <p>
+                    En un lugar de la Mancha, de cuyo nombre no quiero acordarme, 
+                    no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero, 
+                    adarga antigua, rocín flaco y galgo corredor.
+                </p>
+            </article>
+        </div>
+        <div>
+            <input id="ac-2" name="accordion-1" type="checkbox"/>
+            <label for="ac-2">Two</label>
+            <article>
+                <p>
+                    Una olla de algo más vaca que carnero, salpicón las más noches, 
+                    duelos y quebrantos los sábados, lantejas los viernes, algún palomino de añadidura los domingos, 
+                    consumían las tres partes de su hacienda.
+                </p>
+            </article>
+        </div>
+        <div>
+            <input id="ac-3" name="accordion-1" type="checkbox" />
+            <label for="ac-3">Three</label>
+            <article>
+                <p>
+                    El resto della concluían sayo de velarte, calzas de velludo para las fiestas, 
+                    con sus pantuflos de lo mesmo, y los días de entresemana se honraba con su vellorí de lo más fino.
+                </p>
+            </article>
+        </div>
+      </accordion>
+      </code></pre> 
+
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <section class="top" id="image">
+            <h2>Image utils</h2>
+          </section>
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <p>
+            To complete consistency of Zimit Framework incorporates the set of typographic icons: <em>Ligature Symbols</em> and certain images related components.<br/>
+            <br/>
+            <b>Icon set:</b><br/>
+            These icons based on typography were created by Kazuyuki Motoyama under the SIL Open Font License.<br/> 
+            More info <a href="http://kudakurage.com/ligature_symbols/"><button>Here <icon>external</icon></button></a><br/>
+            <tag color="orange">Option</tag> Also you can use <code>&lt;div class="lsf"&gt;</code> instead <code>&lt;icon&gt;</code><br/>
+            <br/>
+            <icon class="c1">file</icon> <icon class="c1">print</icon> <icon class="c1">delete</icon> <icon class="c1">clear</icon> <icon class="c1">save</icon> <icon class="c1">upload</icon> <icon class="c1">cloud</icon> <icon class="c1">folder</icon>
+            <icon>etc</icon>
+
+      <pre><code data-language="html">
+      <icon>file</icon> <div class="lsf">print</div>
+      </code></pre> 
+
+            <b>Thumbnails:</b><br/>
+            The best way to display information definitely thumbnails are thumbnails and therefore a component has been created to fulfill that function.<br/>
+            <br/>
+            <div class="thumbnail">
+              <img src="http://cambelt.co/200x200g">
+              <div class="details">
+                <h6>Image title 1</h6>
+                <p>This is the image description for this awesome image.</p>
+               </div>
+            </div>
+            <div class="thumbnail">
+              <img src="http://cambelt.co/200x200g">
+              <div class="details">
+                <h6>Image title 2</h6>
+                <p>This is the image description for this awesome image.</p>
+               </div>
+            </div>
+            <div class="thumbnail">
+              <img src="http://cambelt.co/200x200g">
+              <div class="details">
+                <h6>Image title 3</h6>
+                <p>This is the image description for this awesome image.</p>
+               </div>
+            </div>
+
+      <pre><code data-language="html">
+      <div class="thumbnail">
+        <img src="http://cambelt.co/200x200g">
+        <div class="details">
+          <h6>Image tittle</h6>
+          <p>This the image description for this awesome image.</p>
+        </div>
+      </div>
+      </code></pre>
+
+          <b>Carousel:</b><br/>
+          A must to show image galleries attractively to the user. Also as the entire framework, implemented only with CSS.<br/>
+
+          <article class="carousel">
+            <input type="radio" name="slider" id="slide1" checked/>
+            <input type="radio" name="slider" id="slide2">
+            <input type="radio" name="slider" id="slide3">
+            <input type="radio" name="slider" id="slide4">
+            <input type="radio" name="slider" id="slide5">
+            <div class="slides">
+                <div class="inner">
+                  <article>
+                        <img src="http://cambelt.co/900x400g"/>
+                        <div class="description">
+                          <b>Sample 1</b>
+                          <i>Description sample 1</i>
+                        </div>
+                     </article>
+                  <article>
+                        <img src="http://cambelt.co/900x400g"/>
+                        <div class="description">
+                          <b>Sample 2</b>
+                          <i>Description sample 2</i>
+                        </div>
+                  </article>
+                  <article>
+                        <img src="http://cambelt.co/900x400g"/>
+                        <div class="description">
+                             <b>Sample 3</b>
+                          <i>Description sample 3</i>
+                        </div>
+                  </article>
+                  <article>
+                        <img src="http://cambelt.co/900x400g"/>
+                        <div class="description">
+                          <b>Sample 4</b>
+                          <i>Description sample 4</i>
+                        </div>
+                  </article>
+                     <article>
+                        <img src="http://cambelt.co/900x400g"/>
+                        <div class="description">
+                          <b>Sample 5</b>
+                          <i>Description sample 5</i>
+                        </div>
+                  </article>
+                </div>
+            </div>
+            <div class="controls">
+              <label for="slide1"></label>
+              <label for="slide2"></label>
+              <label for="slide3"></label>
+              <label for="slide4"></label>
+              <label for="slide5"></label>
+            </div>
+            <div class="active">
+              <label for="slide1"></label>
+              <label for="slide2"></label>
+              <label for="slide3"></label>
+              <label for="slide4"></label>
+              <label for="slide5"></label>
+            </div>
+          </article>
+
+      <pre><code data-language="html">
+      <article class="carousel">
+        <input type="radio" name="slider" id="slide1" checked="">
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <input type="radio" name="slider" id="slide4">
+        <input type="radio" name="slider" id="slide5">
+        <div class="slides">
+          <div class="inner">
+            <article>
+              <img src="http://cambelt.co/900x400g"/>
+              <div class="description">
+                <b>Sample 1</b>
+                <i>Description sample 1</i>
+              </div>
+           </article>
+          <article>
+            <img src="http://cambelt.co/900x400g"/>
+            <div class="description">
+              <b>Sample 2</b>
+              <i>Description sample 2</i>
+            </div>
+          </article>
+          <article>
+            <img src="http://cambelt.co/900x400g"/>
+            <div class="description">
+              <b>Sample 3</b>
+              <i>Description sample 3</i>
+            </div>
+          </article>
+          <article>
+            <img src="http://cambelt.co/900x400g"/>
+            <div class="description">
+              <b>Sample 4</b>
+              <i>Description sample 4</i>
+            </div>
+          </article>
+          <article>
+            <img src="http://cambelt.co/900x400g"/>
+            <div class="description">
+              <b>Sample 5</b>
+              <i>Description sample 5</i>
+            </div>
+          </article>
+        </div>
+        </div>
+        <div class="controls">
+          <label for="slide1"></label>
+          <label for="slide2"></label>
+          <label for="slide3"></label>
+          <label for="slide4"></label>
+          <label for="slide5"></label>
+        </div>
+        <div class="active">
+          <label for="slide1"></label>
+          <label for="slide2"></label>
+          <label for="slide3"></label>
+          <label for="slide4"></label>
+          <label for="slide5"></label>
+        </div>
+      </article>
+      </code></pre>
+
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <section class="top" id="bars">
+            <h2>Bars</h2>
+          </section>
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <p>
+            With the landing of HTML5, has added progress bars for eg. forms, Zimit incorporates and gives their own uniform style to it.<br/>
+            <br/>
+            <b>Progress bar:</b><br/>
+            The progress bars customized by Zimit are animated by default.<br/>
+            <br/>
+            <progress value="70" max="100"></progress>
+
+      <pre><code data-language="html">
+      <progress value="70" max="100"></progress>
+      </code></pre>
+
+            <b>Meter:</b><br/>
+            The <code>&lt;meter&gt;</code> element has little support for customization for now, but Zimit Framework incorporates it to when the support improves.<br/>
+            <br/>
+            <meter value="0.6">60%</meter>
+
+      <pre><code data-language="html">
+      <meter value="0.6">60%</meter>
+      </code></pre>
+
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <section class="top" id="other">
+            <h2>Other utils</h2>
+          </section>
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <p>
+            If at this point, you know little extras, here's some more to complete user experience and the responsive design of Zimit Framework.<br/>
+            <br/>
+            <b>Tags:</b><br/>
+            The tag element is used to emphasize or category labels.<br/>
+
+            <tag color="red">one tag</tag>
+            <tag color="blue">one tag</tag>
+            <tag color="yellow">one tag</tag>
+            <tag color="orange">one tag</tag>
+            <tag color="green">one tag</tag>
+            <tag color="brown">one tag</tag>
+            <tag color="gray">one tag</tag>
+            <tag color="white">one tag</tag>
+            <tag color="black">one tag</tag>
+
+      <pre><code data-language="html">
+      <tag color="red">one tag</tag>
+      <tag color="blue">one tag</tag>
+      <tag color="yellow">one tag</tag>
+      <tag color="orange">one tag</tag>
+      <tag color="green">one tag</tag>
+      <tag color="brown">one tag</tag>
+      <tag color="gray">one tag</tag>
+      <tag color="white">one tag</tag>
+      <tag color="black">one tag</tag>
+      </code></pre>
+
+            <b>Badges:</b><br/>
+            The badge element are used to display or emphasize numerical information.<br/>
+
+            <badge color="red">0</badge>
+            <badge color="blue">1</badge>
+            <badge color="yellow">2</badge>
+            <badge color="orange">3</badge>
+            <badge color="green">4</badge>
+            <badge color="brown">5</badge>
+            <badge color="gray">6</badge>
+            <badge color="white">7</badge>
+            <badge color="black">8</badge>
+
+      <pre><code data-language="html">
+      <badge color="red">0</badge>
+      <badge color="blue">1</badge>
+      <badge color="yellow">2</badge>
+      <badge color="orange">3</badge>
+      <badge color="green">4</badge>
+      <badge color="brown">5</badge>
+      <badge color="gray">6</badge>
+      <badge color="white">7</badge>
+      <badge color="black">8</badge>
+      </code></pre>
+
+            <b>Video:</b><br/>
+            The video element is used as a wrapper for the flash-based videos to make them responsive.<br/>
+            <br/>
+            <div class="video">
+              <iframe src="http://player.vimeo.com/video/4749536?badge=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+              </iframe> 
+              <p>
+                  <a href="http://vimeo.com/4749536">Alma</a> from 
+                  <a href="http://vimeo.com/alma">Rodrigo Blaas</a> on <a href="http://vimeo.com">Vimeo</a>.
+              </p>
+            </div>
+
+      <pre><code data-language="html">
+      <div class="video">
+        <iframe src="http://player.vimeo.com/video/4749536?badge=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+        </iframe> 
+        <p>
+            <a href="http://vimeo.com/4749536">Alma</a> from 
+            <a href="http://vimeo.com/alma">Rodrigo Blaas</a> on <a href="http://vimeo.com">Vimeo</a>.
+        </p>
+      </div>
+      </code></pre>
+
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <br/><br/>
+
+    <footer>
+      <div class="row">
+        <div class="c10">
+          <p>Zimit Framework, Copyright &copy; 2012 <a href="">Jorge Garrido Oval</a>, licensed under MIT license</p>
+        </div>
+        <div class="c2"><a href="#">Back to top ↑</a></div>
+      </div>
+    </footer>
+
+    <!-- Rainbow -->
+    <script type="text/javascript" src="js/vendor/rainbow-custom.min.js"></script>
+  </body>
+</html>
