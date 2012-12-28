@@ -1,0 +1,69 @@
+/**
+ * Skeleton.less
+ *
+ * Basic skeleton definition.
+ *
+ * @project Zimit Framework
+ * @version 0.9
+ * @author Jorge Garrido Oval, firezenk@gmail.com
+ * @copyright 2012
+ * @license MIT
+ */
+
+// Page size fix
+html,body {
+	height: 	100%;
+}
+
+/* Helper to fix elements; 
+
+	<div class="fix">Fixed space</div>
+*/
+.fix {
+	position:	fixed;
+} 
+
+/* Header element, new on HTML5;
+
+	<header>Documment header</header>
+*/
+header {
+	z-index: 			10000;
+	position: 			relative;
+	margin: 			@total_margin;
+	width: 				@header_width;
+	height: 			@total_height;
+}
+ 
+/* Main container for the documment, before than 'header' and aften than 'footer'
+
+	<div class="content">Documment content</div>
+*/
+.content {
+	margin: 			@total_margin;
+	padding-top: 		@header_height;
+	padding-bottom: 	@footer_height;
+	min-height: 		100%;
+	width: 				@total_width;
+	height: 			@total_height;
+}
+.content:after {
+	display:			block;
+	clear:				both;
+	width: 				@footer_width;
+	height:				@footer_height;
+}
+
+/* Footer element, new on HTML5;
+
+	<footer>Documment footer</footer>
+*/
+footer {
+	position: 			relative;
+	margin: 			-@footer_height @total_margin 0;
+	padding:			@footer_padding;
+	height: 			@footer_height;
+	border-top: 		1px solid @footer_border_color;
+	background-color: 	@footer_background;
+	.inner-shadow();
+}

@@ -1,0 +1,184 @@
+/**
+ * Bars.less
+ *
+ * Progress bars, meters and circle loaders definition.
+ *
+ * @project Zimit Framework
+ * @version 0.9
+ * @author Jorge Garrido Oval, firezenk@gmail.com
+ * @copyright 2012
+ * @license MIT
+ */
+
+/* Provides a fully stylized HTML5 progress on supported browsers
+
+```
+    <progress value="70" max="100"></progress>
+```
+*/
+progress {
+	padding: 			0px;
+	height: 			@progress_height;
+	border:				1px solid @progress_border_color;
+	appearance: 		none;
+	-moz-appearance: 	none;
+	-webkit-appearance: none;
+	.border-radius(@progress_border_radius);
+	.gradient(@progress_outer_gradient_base, @progress_outer_gradient_target);
+}
+
+// Background of the progress bar background
+progress[role]:after {
+	background-image: none;
+	.border-radius(@progress_border_radius);
+	.gradient(@progress_outer_gradient_base, @progress_outer_gradient_target);
+	.inner-shadow();
+}
+progress {
+	background: transparent !important;
+	.border-radius(@progress_border_radius);
+	.gradient(@progress_outer_gradient_base, @progress_outer_gradient_target);
+	.inner-shadow();
+}
+progress::-webkit-progress-bar {
+	background: transparent;
+	.border-radius(@progress_border_radius);
+	.gradient(@progress_outer_gradient_base, @progress_outer_gradient_target);
+	.inner-shadow();
+}
+
+// Background of the progress bar value */
+progress::-moz-progress-bar {
+	border:	1px solid @progress_border_color;
+	.border-radius(@progress_border_radius);
+	.striped-bar(@progress_stripes_start_color, @progress_stripes_stop_color);
+}
+progress::-webkit-progress-value {
+	border:	1px solid @progress_border_color;
+	.border-radius(@progress_border_radius);
+	.striped-bar(@progress_stripes_start_color, @progress_stripes_stop_color);
+}
+progress[aria-valuenow]:before {
+	border:	1px solid @progress_border_color;
+	.border-radius(@progress_border_radius);
+	.striped-bar(@progress_stripes_start_color, @progress_stripes_stop_color);
+}
+
+/* Provides a special type of progress bar, a circle loading component
+
+```
+    <div class="circle"><div></div></div>
+```
+*/
+.circle {
+
+	background-color: @progress_circle_inner_color;
+	border:7px solid @progress_circle_border_color;
+	
+	opacity:.8;
+
+	.border-radius(@progress_circle_size);
+	border-top:		5px solid @progress_circle_inner_color;
+	border-left:	5px solid @progress_circle_inner_color;
+	border-right:	5px solid @progress_circle_inner_color;
+	
+	width:	@progress_circle_size;
+	height:	@progress_circle_size;
+	margin:	0 auto;
+
+	-moz-animation:		spin .8s infinite linear;
+	-webkit-animation:	spin .8s infinite linear;
+	-ms-animation:		spin .8s infinite linear;
+
+	>div {
+		width:	110%;
+		height:	110%;
+		.border-radius(@progress_circle_size);
+		background-color: 	@progress_circle_inner_color;
+
+		-moz-animation:		spin .8s infinite linear;
+		-webkit-animation:	spin .8s infinite linear;
+		-ms-animation:		spin .8s infinite linear;
+	}
+}
+
+/* The new HTML5 meter component (supported on a few modern browsers)
+
+    <meter value="0.6">60%</meter>
+*/
+meter {
+	padding: 			0px;
+	border:				1px solid @meter_border_color;
+	background: 		transparent !important;
+	appearance: 		none;
+	-moz-appearance: 	none;
+	-webkit-appearance: none;
+	.border-radius(@meter_border_radius);
+	.gradient(@meter_gradient_base, @meter_gradient_target);
+}
+meter::-webkit-meter-horizontal-optimum-value,
+meter::-webkit-meter-horizontal-suboptimal-value,
+meter::-webkit-meter-horizontal-even-less-good-value {
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#cea), to(#7a3));
+}
+
+// Bar animation
+.striped-bar (@start_color, @stop_color) {		
+
+	background-color: @stop_color;
+
+	background-image: -webkit-gradient(linear, left top, right bottom,
+						color-stop(.25, @start_color), color-stop(.25, transparent),
+						color-stop(.5, transparent), color-stop(.5, @start_color),
+						color-stop(.75, @start_color), color-stop(.75, transparent),
+						to(transparent));
+	background-image: -webkit-linear-gradient(135deg, @start_color 25%, transparent 25%,
+						transparent 50%, @start_color 50%, @start_color 75%,
+						transparent 75%, transparent);
+	background-image: -moz-linear-gradient(135deg, @start_color 25%, transparent 25%,
+						transparent 50%, @start_color 50%, @start_color 75%,
+						transparent 75%, transparent);
+	background-image: -ms-linear-gradient(135deg, @start_color 25%, transparent 25%,
+						transparent 50%, @start_color 50%, r@start_color 75%,
+						transparent 75%, transparent);
+	background-image: -o-linear-gradient(135deg, @start_color 25%, transparent 25%,
+						transparent 50%, @start_color 50%, @start_color 75%,
+						transparent 75%, transparent);
+	background-image: linear-gradient(135deg, @start_color 25%, transparent 25%,
+						transparent 50%, @start_color 50%, @start_color 75%,
+						transparent 75%, transparent);
+	background-size: 30px 30px;            
+	
+	-webkit-animation: 	animate-stripes 3s linear infinite;
+	-moz-animation: 	animate-stripes 3s linear infinite;   
+	-ms-animation:  	animate-stripes 3s linear infinite;
+	-webkit-background-size: 30px 30px;
+	-moz-background-size: 30px 30px; 	
+	-ms-background-size: 30px 30px; 	
+}
+
+@-webkit-keyframes animate-stripes { 
+	0% {background-position: 0 0;} 100% {background-position: 60px 0;}
+}
+
+@-moz-keyframes animate-stripes {
+	0% {background-position: 0 0;} 100% {background-position: 60px 0;}
+}
+
+// Circle animation
+@-moz-keyframes spin {
+	0% { -moz-transform:rotate(0deg); }
+	100% { -moz-transform:rotate(360deg); }
+}
+@-webkit-keyframes spin {
+	0% { -webkit-transform:rotate(0deg); }
+	100% { -webkit-transform:rotate(360deg); }
+}
+@-moz-keyframes unspin {
+	0% { -moz-transform:rotate(0deg); }
+	100% { -moz-transform:rotate(-360deg); }
+}
+@-webkit-keyframes unspin {
+	0% { -webkit-transform:rotate(0deg); }
+	100% { -webkit-transform:rotate(-360deg); }
+}

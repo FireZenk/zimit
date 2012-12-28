@@ -1,0 +1,42 @@
+/**
+ * Debug.less
+ *
+ * Desingner debug utils.
+ *
+ * @project Zimit Framework
+ * @version 0.9
+ * @author Jorge Garrido Oval, firezenk@gmail.com
+ * @copyright 2012
+ * @license MIT
+ */
+
+/* Empty Elements */
+.debug div:empty, .debug span:empty,.debug li:empty,.debug p:empty,.debug td:empty,.debug th:empty { 
+    padding: 20px; 
+    border: 5px dotted yellow !important;
+}
+ 
+/* Empty Attributes */
+.debug *[alt=""], .debug *[title=""], .debug *[class=""], .debug *[id=""], .debug a[href=""] { 
+    border: 5px solid yellow !important;
+}
+ 
+/* Deprecated Elements */
+.debug applet, .debug basefont, .debug center, .debug dir, .debug font, .debug isindex, .debug menu, .debug s, .debug strike, .debug u {
+    border: 5px dotted red !important;
+}
+ 
+/* Deprecated Attributes */
+.debug *[background], .debug *[bgcolor], .debug *[clear], .debug *[color], .debug *[compact], .debug *[noshade], .debug *[nowrap], .debug *[size], .debug *[start],.debug *[bottommargin], .debug *[leftmargin], .debug *[rightmargin], .debug *[topmargin], .debug *[marginheight], .debug *[marginwidth], .debug *[alink], .debug *[link], .debug *[text], .debug *[vlink],.debug *[align], .debug *[valign],.debug *[hspace], .debug *[vspace],.debug *[height], .debug *[width],.debug ul[type], .debug ol[type], .debug li[type] {
+    border: 5px solid red !important;
+}
+ 
+/* Proposed Deprecated Elements */
+.debug input[type="button"], .debug big, .debug tt {
+    border: 5px dotted #33FF00 !important;
+}
+ 
+/* Proposed Deprecated Attributes */
+.debug *[border], .debug table[cellpadding], .debug table[cellspacing] { 
+    border: 5px solid #33FF00 !important;
+}

@@ -1,0 +1,231 @@
+/**
+ * Fonts.less
+ *
+ * Font definition for all styled texts.
+ *
+ * @project Zimit Framework
+ * @version 0.9
+ * @author Jorge Garrido Oval, firezenk@gmail.com
+ * @copyright 2012
+ * @license MIT
+ */
+ 
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,700,400,600&.css");
+
+html, body {
+	font-family: 	@font_base;
+}
+
+h1, h2, h3, h4 {
+	font-weight: 	@font_weight_heavy;
+}
+
+/* Heading 1;
+
+	<h1>Sample</h1>
+*/
+h1 {
+	font-size: 		3.6em;
+}
+
+/* Heading 2;
+
+	<h2>Sample</h2>
+*/
+h2 {
+	font-size: 		3.0em;
+}
+
+/* Heading 3;
+
+	<h3>Sample</h3>
+*/
+h3 {
+	font-size: 		2.4em;
+}
+
+/* Heading 4;
+
+	<h4>Sample</h4>
+*/
+h4 {
+	font-size: 		1.8em;
+}
+
+/* Heading 5;
+
+	<h5>Sample</h5>
+*/
+h5 {
+	font-weight: 	@font_weight_normal;
+	font-size: 		1.6em;
+}
+
+/* Heading 6;
+
+	<h6>Sample</h6>
+*/
+h6 {
+	font-weight: 	@font_weight_normal;
+	font-size: 		1.4em;
+}
+
+/* Paragraph;
+
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu lorem eget nunc convallis congue. 
+		Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+	</p>
+*/
+p {
+	font-size: 		1em;
+	font-weight: 	@font_weight_normal;
+}
+
+/* Bolds: 'b' and 'strong' elements;
+	
+	<b>Sample with b</b>, <strong>Sample with strong</strong>
+*/
+b, strong {
+	font-size: 		1em;
+	font-weight: 	@font_weight_heavy;
+	font-style:	 	bold;
+}
+
+/* Italic styled elements: 'i', 'cite', and 'time';
+
+	<i>Sample italic</i>, <i>Sample cite</i>, <time>11:00</time>
+*/
+i, cite, time {
+	font-size: 		1em;
+	font-weight: 	@font_weight_normal;
+	font-style:	 	italic;
+}
+
+/* Definitions and abbreviations;
+	
+	<dfn>Sample definition</dfn>, <abbr title="Abreviation Sample">AS</abbr>
+*/
+dfn, abbr {
+	font-size: 		1em;
+	font-weight: 	@font_weight_middle;
+}
+
+/* Emphatized text;
+
+	<em>Emphatized text</em>
+*/
+em {
+	font-size: 		1em;
+	font-weight: 	@font_weight_middle;
+	font-style:	 	italic;
+}
+
+/* Stylized bloquote;
+
+	<blockquote>Blockquote sample text</blockquote>
+*/
+blockquote {
+	font-size: 		1em;
+	font-weight: 	@font_weight_light;
+	font-style:  	italic;
+}
+
+/* Deteled styled elements: 'del' and 's';
+
+	<del>Deleted sample</del>, <s>Deleted sample</s>
+*/
+del, s {
+	font-size: 		1em;
+	font-style: 	italic;
+}
+
+/* Code presentation text elements: 'kbd' and 'var';
+
+	<kbd>Keyboard element</kb>, <var>Variable element</var>
+*/
+kbd, var {
+	font-size: 		1em;
+	font-weight: 	@font_weight_light;
+}
+
+/* Preformated text element;
+
+	<pre>Preformated text sample</pre>
+*/
+pre {
+	font-size: 			1em;
+	font-weight: 		@font_weight_light;
+	border: 			1px solid @code_border_color;
+	background-color: 	@code_background_color;
+	.border-radius(2px);
+}
+
+/* Code text element;
+
+	<code>Code sample text</code>
+*/
+code {
+	font-size: 			1em;
+	padding: 			0 2px 0 2px;
+	border: 			1px solid @code_border_color;
+	background-color: 	@code_background_color;
+	.border-radius(2px);
+}
+
+/* List elements, unordered list type;
+
+	<ul>
+		<li>First sample text
+		<li>Second sample text
+	</ul>
+*/
+ul {
+	font-size: 		1em;
+	font-weight: 	@font_weight_light;
+
+	li {
+		font-weight: 	@font_weight_normal;
+	}
+}
+
+/* List elements, ordered list type;
+
+	<ol>
+		<li>First sample text
+		<li>Second sample text
+	</ol>
+*/
+ol {
+	font-size: 		1em;
+	font-weight: 	@font_weight_light;
+
+	li {
+		font-weight: 	@font_weight_normal;
+	}
+}
+
+/* Defines a section with header;
+
+	<section>
+		<h2>Title</h2> <h6>Subttle</h6>
+		<hr/>
+	</section> 
+*/
+section {
+	h2 {
+		display: inline;
+		font-weight: @font_weight_middle;
+	}
+
+	h6 {
+		display: inline;
+		margin-left: 10px;
+		font-weight: @font_weight_normal;
+		color: lighten(#000,50%);
+
+		&:before{
+			content: " ";
+		} 
+	}
+}

@@ -1,0 +1,61 @@
+/**
+ * Icons.less
+ *
+ * Add typographic based icons.
+ *
+ * @project Zimit Framework
+ * @version 0.9
+ * @author Jorge Garrido Oval, firezenk@gmail.com
+ * @copyright 2012
+ * @license MIT
+ */
+
+.antialias() {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.rendering() {
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'LigatureSymbols';
+    src: url('LigatureSymbols.eot');
+    src: url('LigatureSymbols.eot?#iefix') format('embedded-opentype'),
+         url('LigatureSymbols.woff') format('woff'),
+         url('LigatureSymbols.ttf') format('truetype'),
+         url('LigatureSymbols.svg#LigatureSymbols') format('svg');
+    src: url('LigatureSymbols.ttf') format('truetype');
+}
+
+/* Sample for use any font-icon on any element
+
+    <span class="lsf">info</span>
+*/
+.lsf {
+  font-size:    @font_icon_size;
+  font-family:  'LigatureSymbols';
+  .rendering();
+  .antialias();
+}
+
+/* New elements called 'icon', do the same as .lsf class but more semantic
+
+    <icon>info</icon>
+*/
+icon {
+  font-size:    @font_icon_size;
+  font-family:  'LigatureSymbols';
+  .rendering();
+  .antialias();
+}

@@ -1,0 +1,1901 @@
+/**
+ * Components.less
+ *
+ * Components definition: only single component definitions allowed.
+ *
+ * @project Zimit Framework
+ * @version 0.9
+ * @author Jorge Garrido Oval, firezenk@gmail.com
+ * @copyright 2012
+ * @license MIT
+ */
+
+/* Separator element: 'hr'; 
+
+	<hr/>
+*/
+hr {
+	border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Ampersand optionally styled;
+
+	<span class="amp">&amp;</span>
+*/
+span.amp {
+  font-style: 		italic;
+  font-family: 		Baskerville, Palatino, "Book Antiqua", serif;
+}
+
+/* Blockquote detailed styling;
+
+	<blockquote>Sample blockquote text</blockquote>
+*/
+blockquote {
+	margin:			1.5em 10px;
+	padding:		0.5em 10px;
+	border-left:	10px solid @blockquote_details;
+	background:		@blockquote_background;
+	quotes:			"\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+	margin-right:	0.25em;
+	color:			@blockquote_details;
+	content:		open-quote;
+	vertical-align:	-0.4em;
+	font-size:		4em;
+	line-height:	0.1em;
+}
+blockquote p {
+	display: inline;
+}
+
+/* Navigantion bar, higly recommended to make the page header menu;
+
+	<nav>
+		<a class="site">Site name</a>
+
+        <input id="expand-util" type="checkbox"/>
+        <label for="expand-util"><icon class="expand">menu</icon></label>
+
+		<ul id="menu">
+			<li><a>Section 1</a>
+			<li><a>Section 2</a>
+			<li><a>Section 3</a>
+		</ul>
+	</nav>
+*/
+nav {
+    overflow:			hidden;
+    padding:			10px;
+    width: 				@header_width;
+    border: 			1px solid @nav_border_color;
+    .border-radius(2px);
+    .gradient(@nav_gradient_base, @nav_gradient_target);
+
+    ul {
+	    margin:			0 10px 0 10px;
+	    padding:		0;
+	    list-style:		none;
+	}
+
+    ul li a {
+	    float:			left;
+	    margin-right:	10px;
+	    padding-right:	10px;
+		border: 		solid @nav_border_color;
+		border-width: 	0 1px 0 0px;
+	    color:			@nav_li_color;
+	    text-align:		center;
+	    text-decoration:none;
+	    font-weight:	@font_weight_middle;
+	    font-size:		16px;
+
+	    &:hover {
+	    	.text-shadow;
+	    }
+	}
+
+	ul li:first-child a { 
+		border-left: none; 
+	}
+ 
+	ul li:last-child a { 
+		border-right: none; 
+	}
+
+	.search {
+		display: block;
+		float: right;
+		margin: 0px;
+		padding: 0 0 0 14px;
+
+		@media(max-width:767px)	{
+			display: none;
+		}
+	}
+
+    .site {
+    	float:			left;
+		margin-right: 	20px;
+		color: 			@nav_site_color;
+		text-decoration: none;
+		font-weight:	@font_weight_heavy;
+
+		@media(max-width:767px){
+    		visibility: visible;
+    	}
+	}
+
+	.expand {
+		display: 		 none;
+		float: 			 right;
+		padding: 2px 8px 2px 8px;
+		text-decoration: none;
+		font-weight:	 @font_weight_heavy;
+		color: 			 @nav_expand_color;
+		font-size: 100%;
+		.button-mixin;
+
+		@media(max-width:767px){
+			display:	block;
+		}
+	}
+	input[type="checkbox"] {
+		display: none;
+
+		@media(max-width:767px) {
+			~ #menu {
+				display: none;
+				background: transparent;
+			}
+		}
+
+		&:checked {
+			~ #menu {
+				display: block;
+				height: auto;
+				width: 100%;
+				margin:	0px;
+				margin-top: 10px;
+          		.transition(height 3s ease);
+
+          		&first-child {
+          			margin-top: 10px;
+          		} 
+
+				a {
+					float:			left;
+				    color:			@nav_li_color;
+				    text-align:		center;
+				    text-decoration:none;
+				    font-weight:	@font_weight_middle;
+				    font-size:		16px;
+				    width: 			100%;
+				    border:			0px;
+				    border-top: 	1px solid @nav_border_color;
+				    padding: 		0px;
+
+				    &:hover {
+				    	color:				lighten(@nav_li_color ,50%);
+				    	background-color: 	darken(@nav_gradient_target, 10%);
+				    }
+				}
+			}
+		}
+	}
+}
+
+/* Styled link element;
+
+	<a href="#">Sample link</a>
+*/
+a {
+	color: @a_color;
+}
+
+/* Styled buttons, also with icons; 
+
+	<button>Sample button</button>
+*/
+button {
+	icon, .lsf {
+		font-size: 120%;
+	}
+	margin-top: 2px;
+	margin-bottom: 2px;
+	.button-mixin;
+}
+input[type="submit"] {
+	.button-mixin;
+}
+input[type="reset"] {
+	.button-mixin;
+}
+.button-mixin() {
+	border:			1px solid @button_border_color;
+	color: 			@button_text_color;
+	font-weight: 	@font_weight_normal;
+
+	&:hover {
+		.gradient(@button_gradient_target, @button_gradient_target);
+		.inner-shadow;
+	}
+	.gradient(@button_gradient_base, @button_gradient_target);
+	.border-radius;
+}
+
+/* Optional coloured styled buttons, also with icons; 
+
+	<button class="btn-red">Sample button</button>
+	<button class="btn-blue">Sample button</button>
+	<button class="btn-orange">Sample button</button>
+	<button class="btn-yellow">Sample button</button>
+*/
+.btn-red 	{	
+	color:#ffffff; 
+	&:hover {	
+		.gradient(darken(@optional_colors_red, 10%), darken(@optional_colors_red, 10%));
+	} 
+	.gradient(lighten(@optional_colors_red, 30%), darken(@optional_colors_red, 10%));
+}
+.btn-blue 	{	
+	color:#ffffff; 
+	&:hover {	
+		.gradient(darken(@optional_colors_blue, 10%), darken(@optional_colors_blue, 10%));
+	} 
+	.gradient(lighten(@optional_colors_blue, 30%), darken(@optional_colors_blue, 10%));
+}
+.btn-orange 	{	
+	color:#ffffff; 
+	&:hover {	
+		.gradient(darken(@optional_colors_orange, 10%), darken(@optional_colors_orange, 10%));
+	} 
+	.gradient(lighten(@optional_colors_orange, 30%), darken(@optional_colors_orange, 10%));
+}
+.btn-yellow {	
+	color:#ffffff; 
+	&:hover {	
+		.gradient(darken(@optional_colors_yellow, 10%), darken(@optional_colors_yellow, 10%));
+	} 
+	.gradient(lighten(@optional_colors_yellow, 30%), darken(@optional_colors_yellow, 10%));
+}
+.btn-green	{	
+	color:#ffffff; 
+	&:hover {	
+		.gradient(darken(@optional_colors_green, 10%), darken(@optional_colors_green, 10%));
+	} 
+	.gradient(lighten(@optional_colors_green, 30%), darken(@optional_colors_green, 10%));
+}
+.btn-brown	{	
+	color:#ffffff; 
+	&:hover {	
+		.gradient(darken(@optional_colors_brown, 10%), darken(@optional_colors_brown, 10%));
+	} 
+	.gradient(lighten(@optional_colors_brown, 30%), darken(@optional_colors_brown, 10%));
+}
+.btn-gray	{	
+	color:#ffffff; 
+	&:hover {	
+		.gradient(darken(@optional_colors_gray, 10%), darken(@optional_colors_gray, 10%));
+	} 
+	.gradient(lighten(@optional_colors_gray, 30%), darken(@optional_colors_gray, 10%));
+}
+.btn-black	{	
+	color:#ffffff; 
+	&:hover {	
+		.gradient(darken(@optional_colors_black, 10%), darken(@optional_colors_black, 10%));
+	} 
+	.gradient(lighten(@optional_colors_black, 30%), darken(@optional_colors_black, 10%));
+}
+.btn-white	{	
+	color:#000000;  
+	&:hover {	
+		.gradient(darken(@optional_colors_white, 10%), darken(@optional_colors_white, 10%));
+	} 
+	.gradient(darken(@optional_colors_white, 10%), darken(@optional_colors_white, 30%));
+}
+
+/* Checkbox and radio buttons;
+
+	<input type="checkbox"></input>
+	<input type="radio"></input>
+*/
+input[type="checkbox"] {
+	padding: 7px;
+	border-width: 7px;
+
+	&:checked {
+		padding: 4px;
+		border-width: 4px;
+		.gradient(@button_gradient_base, @button_gradient_target);
+	}
+	.button-mixin;
+	.border-radius;
+}
+input[type="radio"] {
+	padding: 7px;
+	border-width: 7px;
+
+	&:checked {
+		padding: 4px;
+		border-width: 4px;
+		.border-radius(25px);
+		.gradient(@button_gradient_base, @button_gradient_target);
+	}
+
+	label {
+		padding-bottom: 7px;
+	}
+	.button-mixin;
+	.border-radius(25px);
+}
+
+/* Text inputs;
+
+	<input type="text"></input>
+	<input type="password"></input>
+	<input type="number"></input>
+*/
+input {
+	margin: 2px;
+	border:	1px solid @input_border_color;
+	.border-radius;
+}
+input[type="text"], input[type="password"], input[type="number"] {
+	.inner-shadow;
+}
+
+/* Custom file upload element; 
+
+	<div class="upload">Upload<input type="file"/> <icon>upload</icon> </div>
+*/
+.file-select-config() {
+	padding: 4px;
+	icon, .lsf {
+		float: 			right;
+		padding-right: 	2px;
+		padding-left: 	5px;
+		border: 		solid @button_border_color;
+		border-width: 	0 0 0 1px;
+		font-size: 		120%;
+	}
+	.button-mixin;
+}
+input[type="file"] {
+	position: absolute;
+	display: inline;
+	margin-left: -@input_file_button_width+(@input_select_button_width/2);
+	padding: 0px;
+	width: @input_file_button_width;
+	border-width: 0px;
+	color: transparent;
+	text-indent:-9999px;
+}
+.upload {
+	width: @input_file_button_width;
+	.file-select-config;
+}
+
+/* Custom selection component;
+
+	<div class="select">
+        <select>
+            <option selected value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+        </select>
+        <icon>down</icon> 
+    </div>
+*/
+select {
+	position: absolute;
+	display: inline;
+	margin-left: -@input_select_button_width+(@input_select_button_width/2);
+	padding: 0px;
+	width: @input_select_button_width;
+	border-width: 0px;
+	background-color: transparent;
+	color: transparent;
+}
+.select {
+	width: @input_select_button_width;
+	.file-select-config;
+}
+
+/* Dedicated input to web search;
+	
+	<input type="text" class="search" placeholder="Search"/>
+*/
+.search {
+	padding-left: 	14px;
+	border:			1px solid @input_border_color;
+	font-weight: 	@font_weight_normal;
+	.border-radius(15px);	
+}
+
+/* Styled input for datalists;
+
+	<div class="datalist">
+    	<input list="browsers"/>
+        
+        <datalist id="browsers">
+        	<option value="Internet Explorer">
+          	<option value="Firefox">
+          	<option value="Chrome">
+           	<option value="Opera">
+       		<option value="Safari">
+       	</datalist>
+        <icon>down</icon> 
+    </div>
+*/
+.datalist {
+	z-index: 70;
+	> input {
+		font-weight: @font_weight_normal;
+		.inner-shadow;
+	}
+	
+	icon, .lsf {
+		z-index: 		69;
+		margin-left: 	-33px;
+		padding-right: 	2px;
+		padding-left: 	5px;
+		border: 		solid @button_border_color;
+		border-width: 	0 0 0 1px;
+		color: 			@button_text_color;
+		font-size: 		120%;
+	}
+}
+
+/* Round-cornered textarea for large texts;
+
+	<textarea cols="19" rows="2">Sample text...</textarea>
+*/
+textarea {
+	margin: 2px;
+	border:	1px solid @input_border_color;
+	text-indent: 0px;
+	.border-radius;
+	.inner-shadow;
+}
+
+/* Round-cornered fieldset;
+	
+	<form>
+        <fieldset>
+          <legend>Personalia:</legend>
+          Name: <input type="text" size="30" /><br />
+          Email: <input type="text" size="30" /><br />
+          Date of birth: <input type="text" size="10" />
+        </fieldset>
+    </form>
+*/
+fieldset {
+	margin: 2px;
+	.border-radius;
+}
+
+/* Keygen HTML5 component;
+
+	<keygen name="security"></keygen> 
+*/
+keygen {
+	.button-mixin;
+}
+
+/* Mark HTML5 component;
+
+	<mark>Marked text</mark>
+*/
+mark {
+	.border-radius;
+}
+
+/* Full styled menu item to do horizontal lists or menus;
+
+	<menu type="toolbar">
+		<command type="command" label="New">New</command>
+        <command type="command" label="Save">Save</command>
+        <command type="command" label="Edit">Edit</command>
+        <command type="command" label="Delete">Delete</command>
+    </menu>
+*/
+menu {
+
+	command {
+		cursor: pointer;
+	}
+
+	&[type="choose"] {
+		list-style: none;
+		background-color: @menu_background_color;
+		.border-radius;
+
+		li {
+			border-bottom:	1px solid @menu_border_color;
+		}
+	}
+
+	&[type="toolbar"] {
+		overflow: hidden; 
+		margin: 0;
+		padding: 2px;
+		border:	1px solid @menu_border_color;
+		background-color: @menu_background_color;
+
+		> command {
+			cursor: pointer;
+			margin-left: 10px;
+			&:hover {
+				.text-shadow;
+			}
+		}
+
+		ul {
+			display: inline;
+			list-style:	none;
+
+			li {
+				float: left;
+				margin:	0 10px 0 10px;
+
+				a {
+					color:	@menu_text_color;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+/* Custom component 'tag' used to mark or emphatize words, you can also use 'span' with 'tag' class;
+
+	<tag color="red">etiqueta</tag>
+    <tag color="blue">etiqueta</tag>
+    <tag color="yellow">etiqueta</tag>
+    <tag color="green">etiqueta</tag>
+	<tag color="brown">etiqueta</tag>
+    <tag color="gray">etiqueta</tag>
+    <tag color="white">etiqueta</tag>
+    <tag color="black">etiqueta</tag>
+*/
+tag, .tag {
+	margin:	 2px;
+	padding: 3px;
+	width: auto;
+	border: 2px solid;
+	color: @tag_text_color;
+	font-size: 0.6em;
+
+	&[color="red"] 		{	background-color: 	lighten(@optional_colors_red, 20%);		}
+	&[color="blue"] 	{	background-color: 	lighten(@optional_colors_blue, 20%);	}
+	&[color="orange"] 	{	background-color: 	lighten(@optional_colors_orange, 20%);	}
+	&[color="yellow"] 	{	background-color: 	lighten(@optional_colors_yellow, 20%);	}
+	&[color="green"] 	{	background-color: 	lighten(@optional_colors_green, 20%);	}
+	&[color="brown"] 	{	background-color: 	lighten(@optional_colors_brown, 20%);	}
+	&[color="gray"] 	{	background-color: 	lighten(@optional_colors_gray, 20%);	}
+	&[color="black"] 	{	background-color: 	lighten(@optional_colors_black, 20%);	}
+	&[color="white"] 	{	background-color: 	darken(@optional_colors_white, 20%);	}
+
+	.border-radius;
+	.drop-shadow;
+}
+.tag-red 		{	background-color: 	lighten(@optional_colors_red, 20%); 	}
+.tag-blue 		{	background-color: 	lighten(@optional_colors_blue, 20%); 	}
+.tag-orange 	{	background-color: 	lighten(@optional_colors_orange, 20%); 	}
+.tag-yellow 	{	background-color: 	lighten(@optional_colors_yellow, 20%); 	}
+.tag-green		{	background-color: 	lighten(@optional_colors_green, 20%); 	}
+.tag-brown		{	background-color: 	lighten(@optional_colors_brown, 20%); 	}
+.tag-gray		{	background-color: 	lighten(@optional_colors_gray, 20%); 	}
+.tag-black		{	background-color: 	lighten(@optional_colors_black, 20%); 	}
+.tag-white		{	background-color: 	darken(@optional_colors_white, 20%);  	}
+
+/* Custom component to show counters emphatized, you can also use 'span' with 'badge' class;
+
+	<badge color="red">0</badge>
+    <badge color="blue">1</badge>
+    <badge color="yellow">2</badge>
+    <badge color="green">3</badge>
+    <badge color="brown">4</badge>
+    <badge color="gray">5</badge>
+    <badge color="white">6</badge>
+    <badge color="black">7</badge>
+*/
+badge, .badge {
+	margin:	 2px;
+	padding: 0 5px 0 5px;
+	width: auto;
+	border: 2px solid;
+	color: @badge_text_color;
+	font-size: 0.6em;
+
+	&[color="red"] 		{	background-color: 	lighten(@optional_colors_red, 20%);		}
+	&[color="blue"] 	{	background-color: 	lighten(@optional_colors_blue, 20%);	}
+	&[color="orange"] 	{	background-color: 	lighten(@optional_colors_orange, 20%);	}
+	&[color="yellow"] 	{	background-color: 	lighten(@optional_colors_yellow, 20%);	}
+	&[color="green"] 	{	background-color: 	lighten(@optional_colors_green, 20%);	}
+	&[color="brown"] 	{	background-color: 	lighten(@optional_colors_brown, 20%);	}
+	&[color="gray"] 	{	background-color: 	lighten(@optional_colors_gray, 20%);	}
+	&[color="black"] 	{	background-color: 	lighten(@optional_colors_black, 20%);	}
+	&[color="white"] 	{	background-color: 	darken(@optional_colors_white, 20%);	}
+
+	.border-radius(25px);
+	.drop-shadow;
+}
+.badge-red 		{	background-color: 	lighten(@optional_colors_red, 20%); }
+.badge-blue 	{	background-color: 	lighten(@optional_colors_blue, 20%); }
+.badge-orange 	{	background-color: 	lighten(@optional_colors_orange, 20%); }
+.badge-yellow 	{	background-color: 	lighten(@optional_colors_yellow, 20%); }
+.badge-green	{	background-color: 	lighten(@optional_colors_green, 20%); }
+.badge-brown	{	background-color: 	lighten(@optional_colors_brown, 20%); }
+.badge-gray		{	background-color: 	lighten(@optional_colors_gray, 20%); }
+.badge-black	{	background-color: 	lighten(@optional_colors_black, 20%); }
+.badge-white	{	background-color: 	darken(@optional_colors_white, 20%);  }
+
+/* Custom component to show alets or info inline for the user, you can also use 'span' with 'alert' class.
+   This component needs to have their width specified;
+
+	<alert class="c7" color="red" data-dismiss="alert"><strong>Red alert!</strong> Alert message text <a href="#">&times;</a></alert>
+	<alert class="c7" color="blue" data-dismiss="alert"><strong>Info</strong> An information message text <a href="#">&times;</a></alert>
+*/
+alert, .alert {
+	padding: 5px;
+	width: auto;
+	border: 2px solid;
+
+	&[color="red"] 		{	
+		border: 			darken(@optional_colors_red, 20%);
+		background-color: 	lighten(@optional_colors_red, 20%);
+		color:				darken(@optional_colors_red, 20%);	
+	}
+	&[color="blue"] 	{	
+		border:				darken(@optional_colors_blue, 20%);	
+		background-color: 	lighten(@optional_colors_blue, 20%);
+		color:				darken(@optional_colors_blue, 20%);	
+	}
+	&[color="orange"] 	{	
+		border:				darken(@optional_colors_orange, 20%);	
+		background-color: 	lighten(@optional_colors_orange, 20%);
+		color:				darken(@optional_colors_orange, 20%);	
+	}
+	&[color="yellow"] 	{	
+		border:				darken(@optional_colors_yellow, 20%);	
+		background-color: 	lighten(@optional_colors_yellow, 20%);
+		color:				darken(@optional_colors_yellow, 20%);	
+	}
+	&[color="green"] 	{	
+		border:				darken(@optional_colors_green, 20%);	
+		background-color: 	lighten(@optional_colors_green, 20%);
+		color:				darken(@optional_colors_green, 20%);	
+	}
+	&[color="brown"] 	{	
+		border:				darken(@optional_colors_brown, 20%);	
+		background-color: 	lighten(@optional_colors_brown, 20%);
+		color:				darken(@optional_colors_brown, 20%);	
+	}
+	&[color="gray"] 	{	
+		border:				darken(@optional_colors_gray, 20%);	
+		background-color: 	lighten(@optional_colors_gray, 20%);
+		color:				darken(@optional_colors_gray, 20%);	
+	}
+	&[color="black"] 	{	
+		border:				darken(@optional_colors_black, 20%);	
+		background-color: 	lighten(@optional_colors_black, 20%);
+		color:				darken(@optional_colors_black, 20%);	
+	}
+	&[color="white"] 	{	
+		border:				lighten(@optional_colors_white, 20%);	
+		background-color: 	darken(@optional_colors_white, 20%);
+		color:				lighten(@optional_colors_white, 20%);	
+	}
+
+	a {
+		cursor: pointer;
+		font-weight: bold;
+		color: #000000;
+		text-decoration: none;
+		float: right;
+		margin-right: 5px;
+		content: "\00d7";
+	}
+
+	.border-radius;
+	.drop-shadow;
+}
+.alert-red 		{	
+	border: 			darken(@optional_colors_red, 20%);
+	background-color: 	lighten(@optional_colors_red, 20%);
+	color:				darken(@optional_colors_red, 20%);		
+}
+.alert-blue 	{	
+	border:				darken(@optional_colors_blue, 20%);	
+	background-color: 	lighten(@optional_colors_blue, 20%);
+	color:				darken(@optional_colors_blue, 20%);	
+}
+.alert-orange 	{	
+	border:				darken(@optional_colors_orange, 20%);	
+	background-color: 	lighten(@optional_colors_orange, 20%);
+	color:				darken(@optional_colors_orange, 20%);
+}
+.alert-yellow 	{
+	border:				darken(@optional_colors_yellow, 20%);	
+	background-color: 	lighten(@optional_colors_yellow, 20%);
+	color:				darken(@optional_colors_yellow, 20%);		
+}
+.alert-green	{
+	border:				darken(@optional_colors_green, 20%);	
+	background-color: 	lighten(@optional_colors_green, 20%);
+	color:				darken(@optional_colors_green, 20%);	
+}
+.alert-brown	{
+	border:				darken(@optional_colors_brown, 20%);	
+	background-color: 	lighten(@optional_colors_brown, 20%);
+	color:				darken(@optional_colors_brown, 20%);		
+}
+.alert-gray		{
+	border:				darken(@optional_colors_gray, 20%);	
+	background-color: 	lighten(@optional_colors_gray, 20%);
+	color:				darken(@optional_colors_gray, 20%);	
+}
+.alert-black	{
+	border:				darken(@optional_colors_black, 20%);	
+	background-color: 	lighten(@optional_colors_black, 20%);
+	color:				darken(@optional_colors_black, 20%);	
+}
+.alert-white	{
+	border:				lighten(@optional_colors_white, 20%);	
+	background-color: 	darken(@optional_colors_white, 20%);
+	color:				lighten(@optional_colors_white, 20%);	
+}
+
+/* Class to show useful tooltips to the users;
+
+	<a class="tooltip" href="#" data-details="Sample tooltip text">Tooltip</a>
+*/
+.tooltip {
+	position: 			relative;
+  	cursor: 			help;
+  	display: 			inline-block;
+  	text-decoration: 	none;
+  	color: 				@tooltip_text_color;
+ 	outline: 			none;
+ 	border-bottom: 		2px dotted;
+
+  	&:after {
+  		content: 	attr(data-details);
+		position: 	absolute;
+	    bottom: 	130%;
+	    left: 		20%;
+	    padding: 	5px 15px;
+	    white-space:nowrap;
+	    color: @tooltip_bubble_text_color;
+	    .opacity(0);
+	    .transition(all 0.4s ease);
+		.gradient(lighten(@tooltip_background_color,60%), lighten(@tooltip_background_color, 20%));
+		.border-radius(4px);
+		.drop-shadow; 
+	}
+
+	&:before {
+		content: "";
+	    position: absolute;
+	    width: 0;
+	    height: 0;
+	    border-top: 20px solid lighten(@tooltip_background_color, 20%);
+	    border-left: 20px solid transparent;
+	    border-right: 20px solid transparent;
+	    left: 30%;
+	    bottom: 90%;
+	    .transition(all 0.4s ease);
+	    .opacity(0);
+	}
+
+	&:hover {
+
+		&:after {
+	 	   bottom: 100%;
+	 	   .opacity(1);
+		}
+
+		&:before {
+		    bottom: 70%;
+		    .opacity(1);
+		}
+	}
+}
+
+/* Breadcrumb to navigate folders or sites, also you can use 'ul' instead of 'breadcrumb';
+
+	<breadcrumb>
+    	<li><a href="#">Grandparent</a>
+    	<li><a href="#">Parent</a>
+    	<li><a href="#">Child</a>
+    	<li><a href="#">Grandchild</a>
+    	<li><a href="#">Great-Grandchild</a>
+    </breadcrumb>
+*/
+breadcrumb, .breadcrumb {
+  	padding: 	1em;
+  	border: 	1px solid @breadcrumb_border_color;
+
+  	.gradient(@breadcrumb_gradient_base, @breadcrumb_gradient_target);
+  	.border-radius;
+	.drop-shadow;
+
+	ul { 
+		white-space: nowrap;
+	}
+	li {
+	    display: 		inline-block;
+	    margin: 		0 9px 0 -10px;
+	    padding: 		0 20px;
+	    position: 		relative;
+
+	    a { 
+			color: @breadcrumb_text_color;
+		   	text-decoration: none;
+		}
+
+		&:before, &:after {
+		    border-right: 	1px solid @breadcrumb_border_color;
+		    content: 		"";
+		    display: 		block;
+		    height: 		50%;
+		    position: 		absolute;
+		    left: 			0;
+		    right: 			0;
+		    top: 			0;
+		    //z-index: 		-1;
+		    .transform(skewX(30deg));
+		}
+
+		&:after {
+		    bottom: 0;
+		    top: auto;
+		    .transform(skewX(-30deg));
+		}
+
+		&:last-of-type:before, &:last-of-type:after { 
+	    	display: none; 
+		}
+	}
+}
+
+/* Useful panels to remark important information, you can also use 'span' with 'panel' class.
+   This component needs to have their width specified;
+
+	<panel class="c4">
+    	<p class="title">Sample title</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Integer vulputate turpis a turpis consectetur euismod. 
+          Sed sit amet quam et eros dignissim euismod.
+        </p>
+    </panel>
+*/
+panel, .panel {
+	border: 2px solid darken(@panel_color,10%);
+	padding: 10px;
+	background-color: @panel_color;
+	.border-radius;
+	.drop-shadow;
+
+	.title {
+		color: darken(@panel_color,30%);
+		font-weight: @font_weight_heavy;
+		font-size: 1.2em;
+		padding: 0 20px 0 20px;
+	}
+
+	p {
+		color: darken(@panel_color,50%);
+		padding: 0 20px 0 20px;
+	}
+
+}
+
+/* This component implements tabs whith custom elements: 'tab-host' and 'tab'. 
+   You also can usan 'div' instead 'tab-host' and 'tab';
+
+	<tab-host>
+       <tab>
+           <input type="radio" id="tab-1" name="tab-group-1" checked>
+           <label for="tab-1">Tab One</label>
+           
+           <div class="tab-content">
+               content 1
+           </div> 
+       </tab>
+       <tab>
+           <input type="radio" id="tab-2" name="tab-group-1">
+           <label for="tab-2">Tab Two</label>
+           
+           <div class="tab-content">
+               content 2
+           </div> 
+       </tab>
+        <tab>
+           <input type="radio" id="tab-3" name="tab-group-1">
+           <label for="tab-3">Tab Three</label>
+         
+           <div class="tab-content">
+               content 3
+           </div> 
+       </tab>
+      </tab-host>
+*/
+tab-host, .tab-host {
+	position: relative;   
+  	min-height: 200px;
+  	clear: both;
+  	margin: 25px 0;
+
+  	tab, .tab {
+		float: left;
+
+		&:first-child label {
+			.border-radiuses(0, 0, 0, 5px);
+		}
+		&:last-child label {
+			.border-radiuses(5px, 0, 0, 0);
+		}
+		label {
+		  	background: @tabs_background; 
+		  	padding: 10px; 
+		  	border: 1px solid @tabs_border_color; 
+		  	border-bottom: 0px;
+		  	margin-left: -1px; 
+		  	position: relative;
+		  	left: 1px; 
+		}
+		[type=radio] {
+			display: none; 
+
+			&:checked ~ label {
+				background: @tabs_background_active;
+			  	border-bottom: 1px solid white;
+			  	z-index: 2;
+
+			  	~ .tab-content {
+					z-index: 1;
+				}
+			}
+		}
+		.tab-content {
+		  	position: absolute;
+		  	top: 31px;
+		  	left: 0;
+		  	background: @tabs_content_background;
+		  	right: 0;
+		  	bottom: 0;
+		  	padding: 20px;
+		  	border: 1px solid @tabs_border_color; 
+		  	.border-radiuses(5px, 5px, 5px, 0);
+		}
+	}
+}
+
+/* A custom collapsable accordion with custom 'acoordion' tab, but you can use 'div' instead;
+
+	<accordion>
+		<div>
+			<input id="ac-1" name="accordion-1" type="checkbox" checked/>
+			<label for="ac-1">One</label>
+			<article>
+				<p>
+					En un lugar de la Mancha, de cuyo nombre no quiero acordarme, 
+					no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero, 
+					adarga antigua, rocín flaco y galgo corredor.
+				</p>
+            </article>
+        </div>
+        <div>
+            <input id="ac-2" name="accordion-1" type="checkbox"/>
+            <label for="ac-2">Two</label>
+            <article>
+            	<p>
+            		Una olla de algo más vaca que carnero, salpicón las más noches, 
+            		duelos y quebrantos los sábados, lantejas los viernes, algún palomino de añadidura los domingos, 
+            		consumían las tres partes de su hacienda.
+            	</p>
+            </article>
+        </div>
+        <div>
+        	<input id="ac-3" name="accordion-1" type="checkbox" />
+         	<label for="ac-3">Three</label>
+            <article>
+            	<p>
+					El resto della concluían sayo de velarte, calzas de velludo para las fiestas, 
+					con sus pantuflos de lo mesmo, y los días de entresemana se honraba con su vellorí de lo más fino.
+            	</p>
+            </article>
+        </div>
+    </accordion>
+*/
+accordion, 
+.accordion {
+	border: 1px solid @accordion_border_color;
+	width: auto;
+	margin: 10px auto 10px auto;
+	text-align: left;
+	.border-radius;
+
+	input {
+		display: none;
+	}
+
+	div:first-child label {
+		border-top: 1px;
+		.border-radiuses(5px, 0, 0, 5px);
+	}
+
+	div:last-child label {
+		border-bottom: 1px;
+		margin-bottom: 1px;
+		.border-radiuses(0, 5px, 5px, 0);
+	}
+
+	label {
+		padding: 5px;
+		position: relative;
+		z-index: 900;
+		display: block;
+		cursor: pointer;
+		color: @accordion_text_color;
+		.gradient(@accordion_header_color_base, @accordion_header_color_target);
+
+		&:hover {
+			.inner-shadow;
+			.gradient(@accordion_header_color_target, @accordion_header_color_target);
+
+			&:after {
+				content: '▼';
+				position: absolute;
+				width: 20px;
+				height: 20px;
+				right: 5px;
+				top: 5px;
+			} 
+		}
+	}
+
+	input:checked {
+
+		label:hover:after {
+			content: '▼';
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			right: 5px;
+			top: 5px;
+		}
+
+		~ article {
+			height: auto;
+		}
+	}
+
+	input:checked + label {
+		background: @accordion_header_color_hover;
+		color: @accordion_header_text_color_hover;
+		.text-shadow;
+
+		&:hover {
+			background: @accordion_header_color_hover;
+			color: @accordion_header_text_color_hover;
+			.text-shadow;
+
+			&:after{
+				content: '▲';
+			}
+		}
+	}
+
+	article {
+		background: @accordion_text_background;
+		margin-top: -1px;
+		overflow: hidden;
+		height: 0px;
+		position: relative;
+		z-index: 800;
+
+		p {
+			font-style: italic;
+			color: darken(@accordion_text_color, 50%); 
+			padding: 15px;
+		}
+	}
+}
+
+/* Styled and responsive tables, needs that you put 'data-title' on each 'td';
+
+	<table>
+	    <thead>
+	      <tr>
+	        <th>Code</th><th>Company</th><th>Price</th><th>Change</th><th>Change</th>
+	        <th>Open</th><th>High</th><th>Low</th><th>Volume</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	      <tr>
+	        <td data-title="Code">AAC</td>
+	        <td data-title="Company">AUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
+	        <td data-title="Price" class="numeric">$1.38</td>
+	        <td data-title="Change" class="numeric">-0.01</td>
+	        <td data-title="Change %" class="numeric">-0.36%</td>
+	        <td data-title="Open" class="numeric">$1.39</td>
+	        <td data-title="High" class="numeric">$1.39</td>
+	        <td data-title="Low" class="numeric">$1.38</td>
+	        <td data-title="Volume" class="numeric">9,395</td>
+	      </tr>
+	      <tr>
+	        <td data-title="Code">DAC</td>
+	        <td data-title="Company">DUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
+	        <td data-title="Price" class="numeric">$1.38</td>
+	        <td data-title="Change" class="numeric">-0.02</td>
+	        <td data-title="Change %" class="numeric">-0.36%</td>
+	        <td data-title="Open" class="numeric">$1.39</td>
+	        <td data-title="High" class="numeric">$1.39</td>
+	        <td data-title="Low" class="numeric">$1.38</td>
+	        <td data-title="Volume" class="numeric">9,395</td>
+	      </tr>
+	      <tr>
+	        <td data-title="Code">EAC</td>
+	        <td data-title="Company">EUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
+	        <td data-title="Price" class="numeric">$2.38</td>
+	        <td data-title="Change" class="numeric">-0.03</td>
+	        <td data-title="Change %" class="numeric">-0.36%</td>
+	        <td data-title="Open" class="numeric">$1.39</td>
+	        <td data-title="High" class="numeric">$1.39</td>
+	        <td data-title="Low" class="numeric">$1.38</td>
+	        <td data-title="Volume" class="numeric">9,395</td>
+	      </tr>
+	      <tr>
+	        <td data-title="Code">FAC</td>
+	        <td data-title="Company">FUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
+	        <td data-title="Price" class="numeric">$4.38</td>
+	        <td data-title="Change" class="numeric">-0.04</td>
+	        <td data-title="Change %" class="numeric">-0.36%</td>
+	        <td data-title="Open" class="numeric">$1.39</td>
+	        <td data-title="High" class="numeric">$1.39</td>
+	        <td data-title="Low" class="numeric">$1.38</td>
+	        <td data-title="Volume" class="numeric">9,395</td>
+	      </tr>
+	    </tbody>
+  	</table>
+*/
+table { 
+	width: 100%; 
+	border-collapse: collapse; 
+}
+tr:nth-of-type(odd) { 
+	background: @table_strip_coolor; 
+}
+th { 
+	background: lighten(@table_header_background_color, 5%); 
+	font-weight: bold; 
+}
+td, th { 
+	padding: 6px; 
+	border-bottom: 1px solid lighten(@table_border_color, 10%); 
+	text-align: left; 
+}
+
+/* Custom component to show file/folder trees. This component use the root custom element 'tree' but you can also use 'ol';
+
+	<ol>
+      <li>
+          <label for="subfolder1"><icon>folder</icon> Folder 1</label>
+          <input type="checkbox" id="subfolder1" />
+          <ol>
+              <li class="file"><icon>file</icon> <a href="">File 2</a></li>
+              <li class="file"><icon>file</icon> <a href="">File 2</a></li>
+              <li class="file"><icon>file</icon> <a href="">File 2</a></li>
+              <li>
+                  <label for="subfolder2"><icon>folder</icon> Folder 2</label>
+                  <input type="checkbox" id="subfolder2" />
+                  <ol>
+                      <li class="file"><icon>file</icon> <a href="">File 3</a></li>
+                      <li class="file"><icon>file</icon> <a href="">File 3</a></li>
+                      <li class="file"><icon>file</icon> <a href="">File 3</a></li>
+                  </ol>
+              </li>
+          </ol>
+      </li>
+      <li class="file"><icon>file</icon> File 1</li>
+      <li class="file"><icon>file</icon> File 1</li>
+    </ol>
+*/
+tree, .tree {
+	border: 1px solid @tree_border_color;
+	.border-radius;
+
+	li {
+		position: relative;
+		list-style: none;
+
+		&:first-child {
+			border-top: 1px;
+			.border-radiuses(5px, 0, 0, 5px);
+		}
+
+		&:last-child {
+			border-bottom: 1px;
+			margin-bottom: 1px;
+			.border-radiuses(0, 5px, 5px, 0);
+		}
+
+		label {
+			cursor: pointer;
+			display: inline;
+		}
+
+		a {
+			color: #000;
+			width: 100%;
+			text-decoration: none;
+			display: inline;
+		}
+
+		input {
+			position: absolute;
+			left: -28px;
+			margin-left: 0;
+			z-index: 2;
+			cursor: pointer;
+			height: 1em;
+			width: 1em;
+			top: 11px;
+			.opacity(0);
+
+			+ ol:before {
+				font-size: 24px;
+				font-weight: bold;
+				content: "+";
+				margin: -1.5em 0 0 -65px;
+		    	display: block;
+			}
+
+			+ ol > li { 
+				display: none; 
+				margin-left: -14px !important; 
+				padding-left: 1px;
+			}
+
+			&:checked {
+				+ ol {
+					margin: -1.25em 0 0 -44px;
+					padding: 1.563em 0 0 80px;
+					height: auto;
+
+					&:before {
+						font-size: 24px;
+						font-weight: bold;
+						content: "-";
+						margin: -1.8em 0 0 -58px;
+				    	display: block;
+				    }
+				}
+
+				+ ol > li { 
+					display: block; 
+					margin: 0 0 0.125em;
+				}
+
+				+ ol > li:last-child { 
+					margin: 0 0 0.063em;
+				}
+			}
+		}
+	}
+}
+
+/* Pagination list-based component;
+
+
+	<ul class="pagination">
+      <li class="prev"><a href="">&laquo;</a></li>
+      <li class="current"><a href="">1</a></li>
+      <li><a href="">2</a></li>
+      <li><a href="">3</a></li>
+      <li><a href="">4</a></li>
+      <li><a href="">&hellip;</a></li>
+      <li><a href="">12</a></li>
+      <li><a href="">13</a></li>
+      <li class="next"><a href="">&raquo;</a></li>
+    </ul>
+*/
+pagination, .pagination {
+	display: inline;
+
+	li {
+		display: inline;
+		list-style: none;
+		padding: 5px;
+
+		border: 1px solid @pagination_boder_color;
+
+		a {
+			color: @pagination_text_color;
+			text-decoration: none;
+		}
+
+		&:first-child {
+			padding-right: 5px;
+			border-right: 1px solid @pagination_boder_color;
+			.border-radiuses(0, 0, 5px, 5px);
+		}
+
+		&:last-child {
+			padding-left: 5px;
+			border-left: 1px solid @pagination_boder_color;
+			.border-radiuses(5px, 5px, 0, 0);
+		}
+
+	}
+
+	.current {
+		display: none;
+	}
+}
+
+/* Modal component to show full-screen messages. You can use 'div' instead 'modal'. (Don't work on docummentation page);
+
+	<a href="#open">Open modal message</a>
+    <modal id="open">
+      <div>
+        <div class="title">
+          Modal message
+          <a href="#close" class="close">&times;</a>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Proin molestie, justo a fermentum placerat, nisi metus consectetur metus, 
+          vel aliquet massa neque sit amet ipsum. Vestibulum non dolor turpis. 
+          Fusce convallis odio vitae orci commodo consectetur.
+        </p>
+        <div class="commands">
+          <button class="btn-green" type="submit">Ok</button>
+          <button class="btn-gray">Cancel</button>
+        </div>
+      </div>
+    </modal>
+*/
+modal, .modal {
+	z-index: 10001;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	pointer-events: none;
+	.opacity(0);
+	.transition(opacity 300ms ease-in);
+
+	&:target {
+		pointer-events: auto;
+		.opacity(1);
+	}
+
+	p {
+		padding: 5px 20px 10px 20px;
+	}
+
+	.title {
+		position: relative;
+		font-weight: bold;
+		border-bottom: 1px solid @modal_separator_color;
+		padding: 5px 10px 5px 10px;
+	}
+
+	> div {
+		z-index: 10002;
+		position: relative;
+		width: 400px;
+		margin: 10% auto;
+		border-bottom: 1px solid @modal_separator_color;
+		.border-radius;
+		.gradient(@modal_gradient_base, @modal_gradient_target);
+	}
+
+	.commands {
+		position: relative;
+		border-top: 1px solid @modal_separator_color;
+		padding-top: 5px;
+		padding: 5px 10px 5px 10px;
+		text-align: right;
+	}
+
+	.close {
+		position: absolute;
+		right: 8px;
+		top: 5px;
+		width: 24px;
+		text-align: center;
+		text-decoration: none;
+		.button-mixin;
+		.btn-gray;
+	}
+}
+
+/* Custom 2 level dropdown component. 
+   Default is displayed on the right, but you can set to be deployed on the left using 'left' class on 'ul' element;
+
+	<ul class="dropdown">
+      <li><a class="drop" href="#">Parent</a>
+        <ul>
+          <li><a href="#">Chlid 1</a>
+          <li><a href="#">Child 2</a>
+          <li><a href="#">Child 3</a>
+          <li><a class="drop" href="#">Parent</a>
+            <ul><!-- or class="left" -->
+              <li><a href="#">Chlid 1</a>
+              <li><a href="#">Chlid 2</li>
+              <li><a href="#">Chlid 3</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+*/
+dropdown, .dropdown {
+	position: relative;
+	list-style-type: none;
+	ul {
+		padding: 0; 
+		margin: 0; 
+		list-style-type: none;
+		.border-radius;
+	}
+	li {
+		float: left; 
+		position: relative;
+		.drop:after {
+			margin: 5px;
+			font-size: 10px;
+			content: '▼';
+		}
+		a {
+			display: block; 
+			text-decoration: none; 
+			color: @dropdown_text_color;
+
+			&:hover {
+				.text-shadow;
+			}
+		}
+		ul {
+			visibility: hidden; 
+			position: absolute; 
+			top: 2.5em; 
+			left: 0; 
+			height: 0; 
+			overflow: hidden;
+			border: 1px solid @dropdown_drop_border_color;
+		}
+		&:hover, a:hover {
+			ul { //drop
+				visibility: visible; 
+				height: auto; 
+				width: 10em; 
+				background: @dropdown_drop_background; 
+				border: 1 px solid @dropdown_drop_border_color;
+				left: 0; 
+				top: 1.5em; 
+				overflow: visible;
+				li:hover ul, li a:hover ul {
+					visibility: visible; 
+					color: @dropdown_text_color; 
+					border: 1px solid @dropdown_drop_border_color;
+					height: auto; 
+					background: @dropdown_drop_background; 
+					width: 10em;
+				} 
+				li {
+					a {//list elements
+						display: block; 
+						font-weight: normal; 
+						background: transparent; 
+						text-decoration: none; 
+						height: auto;
+						padding: 0.2em 0.5em 0.2em;
+						width: 9.5em;
+					}
+					&:hover ul, a:hover ul {
+						left: 9.3em;
+						.left {
+							left: -9.3em;
+						}
+					}
+				}
+			}
+			ul li ul, li a:hover ul li a ul {
+				visibility: hidden; 
+				position: absolute; 
+				top: 0; 
+				left: 9em; 
+				height: 0; 
+				overflow: hidden;
+			}
+		}
+	}
+}
+
+/* A custom carousel with handlers and full responsive with 5 slides support;
+
+	<article class="carousel">
+      	<input type="radio" name="slider" id="slide1" checked="">
+      	<input type="radio" name="slider" id="slide2">
+      	<input type="radio" name="slider" id="slide3">
+      	<input type="radio" name="slider" id="slide4">
+      	<input type="radio" name="slider" id="slide5">
+      	<div class="slides">
+          	<div class="inner">
+            	<article>
+              		<img src="http://cambelt.co/900x400g"/>
+              		<div class="description">
+                		<b>Sample 1</b>
+                		<i>Description sample 1</i>
+              		</div>
+           		</article>
+            	<article>
+              		<img src="http://cambelt.co/900x400g"/>
+              		<div class="description">
+                		<b>Sample 2</b>
+                		<i>Description sample 2</i>
+              		</div>
+            	</article>
+            	<article>
+              		<img src="http://cambelt.co/900x400g"/>
+              		<div class="description">
+               			<b>Sample 3</b>
+                		<i>Description sample 3</i>
+              		</div>
+            	</article>
+            	<article>
+              		<img src="http://cambelt.co/900x400g"/>
+              		<div class="description">
+                		<b>Sample 4</b>
+                		<i>Description sample 4</i>
+              		</div>
+            	</article>
+           		<article>
+              		<img src="http://cambelt.co/900x400g"/>
+              		<div class="description">
+                		<b>Sample 5</b>
+                		<i>Description sample 5</i>
+              		</div>
+            	</article>
+          	</div>
+      	</div>
+      	<div class="controls">
+	        <label for="slide1"></label>
+	        <label for="slide2"></label>
+	        <label for="slide3"></label>
+	        <label for="slide4"></label>
+	        <label for="slide5"></label>
+      	</div>
+      	<div class="active">
+	        <label for="slide1"></label>
+	        <label for="slide2"></label>
+	        <label for="slide3"></label>
+	        <label for="slide4"></label>
+	        <label for="slide5"></label>
+      	</div>
+    </article>
+*/
+carousel, .carousel {
+	overflow: hidden;
+	-webkit-transform: translateZ(0);
+	.transition(all 0.5s ease-out);
+
+	input {
+		display: none;
+	}
+
+	slide, article {
+		width: 20%;
+		float: left;
+		img {
+			width: 100%;
+		}
+	}
+	.description {
+		display: block;
+		background: rgba(0, 0, 0, 0.75);
+		padding: 5px;
+		width: 100%;
+		color: @carousel_text_color;
+		text-align: left;
+		bottom: 0;
+		right: 0;
+		padding: 20px;
+	}
+	.slides {
+		margin: 45px 0 0;
+		background: @carousel_slides_background;
+
+		.inner {
+			width: 500%;
+			line-height: 0;
+			-webkit-transform: translateZ(0);
+		    .transition(all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000));
+		    .transition-timing-function(cubic-bezier(0.770, 0.000, 0.175, 1.000));
+		}
+	}
+	// Each slide
+	#slide1:checked {
+		~ .slides .inner { 
+			margin-left:0; 
+		}
+
+		~ .active label:nth-child(1) {
+			background: @carousel_slide_background;
+			border-color: @carousel_slides_border_color !important;
+		}
+
+		~ .controls label {
+			&:nth-child(2) {
+				&:before {
+					.lsf;
+					content: 'right';
+				}
+				float: right;
+				margin: 0px;
+				display: block;
+				margin-top: -22%;
+			}
+
+			&:nth-child(5) {
+				&:before {
+					.lsf;
+					content: 'left';
+				}
+				float: left;
+				margin-left: 35px;
+				display: block;
+				margin-top: -22%;
+			}
+		}
+	}
+	#slide2:checked {
+		~ .slides .inner { 
+			margin-left:-100%; 
+		}
+
+		~ .active label:nth-child(2) {
+			background: @carousel_slide_background;
+			border-color: @carousel_slides_border_color !important;
+		}
+
+		~ .controls label{ 
+			&:nth-child(3) {
+				&:before {
+					.lsf;
+					content: 'right';
+				}
+				float: right;
+				margin: 0px;
+				display: block;
+				margin-top: -22%;
+			}
+			&:nth-child(1) {
+				&:before {
+					.lsf;
+					content: 'left';
+				}
+				float: left;
+				margin-left: 35px;
+				display: block;
+				margin-top: -22%;
+			}
+		}
+	}
+	#slide3:checked {
+		~ .slides .inner { 
+			margin-left:-200%; 
+		}
+
+		~ .active label:nth-child(3) {
+			background: @carousel_slide_background;
+			border-color: @carousel_slides_border_color !important;
+		}
+
+		~ .controls label {
+			&:nth-child(4) {
+				&:before {
+					.lsf;
+					content: 'right';
+				}
+				float: right;
+				margin-top: 0px;
+				display: block;
+				margin-top: -22%;
+			}
+			&:nth-child(2) {
+				&:before {
+					.lsf;
+					content: 'left';
+				}
+				float: left;
+				margin-left: 35px;
+				display: block;
+				margin-top: -22%;
+			}
+		}
+	}
+	#slide4:checked {
+		~ .slides .inner { 
+			margin-left:-300%; 
+		}
+
+		~ .active label:nth-child(4) {
+			background: @carousel_slide_background;
+			border-color: @carousel_slides_border_color !important;
+		}
+
+		~ .controls label {
+			&:nth-child(5) {
+				&:before {
+					.lsf;
+					content: 'right';
+				}
+				float: right;
+				margin: 0px;
+				display: block;
+				margin-top: -22%;
+			}
+			&:nth-child(3) {
+				&:before {
+					.lsf;
+					content: 'left';
+				}
+				float: left;
+				margin-left: 35px;
+				display: block;
+				margin-top: -22%;
+			}
+		}
+	}
+	#slide5:checked {
+		~ .slides .inner { 
+			margin-left:-400%; 
+		}
+
+		~ .active label:nth-child(5) {
+			background: @carousel_slide_background;
+			border-color: @carousel_slides_border_color !important;
+		}
+
+		~ .controls label {
+			&:nth-child(1) {
+				&:before {
+					.lsf;
+					content: 'right';
+				}
+				float: right;
+				margin: 0px;
+				display: block;
+				margin-top: -22%;
+			}
+			&:nth-child(4) {
+				&:before {
+					.lsf;
+					content: 'left';
+				}
+				float: left;
+				margin-left: 35px;
+				display: block;
+				margin-top: -22%;
+			}
+		}
+	}
+	.controls {
+		margin: -25% 0 0 0;
+		width: 100%;
+		height: 50px;
+
+		label {
+			display: none;
+			width: 50px;
+			height: 50px;
+			.opacity(0.3);
+			-webkit-transform: translateZ(0);
+			.transition(opacity 0.2s ease-out);
+
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+	.active {
+		margin: 23% 0 0;
+		text-align: center;
+
+		label {
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			background: @carousel_control_background_active;
+			.border-radius;
+
+			&:hover {
+				background: @carousel_control_background_active_hover;
+				border-color: @carousel_control_border_active !important;
+			}
+		}
+	}
+}
+
+/* Video wrapper to make the videos full responsive;
+
+	<div class="video">
+      <iframe src="http://player.vimeo.com/video/4749536?badge=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+      </iframe> 
+      <p>
+      	<a href="http://vimeo.com/4749536">Alma</a> from 
+      	<a href="http://vimeo.com/alma">Rodrigo Blaas</a> on <a href="http://vimeo.com">Vimeo</a>.
+      </p>
+    </div>
+*/
+.video {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+
+	iframe, object, embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+/* Component to show beautifull thumbnails;
+
+	<div class="thumbnail">
+       <img src="http://cambelt.co/200x200g">
+       <div class="details">
+         <h6>Image tittle</h6>
+         <p>This the image description for this awesome image.</p>
+       </div>
+    </div>
+*/
+thumbnail, .thumbnail {
+	display: inline-block;
+	border: 1px solid @thumbnail_border_color;
+	.border-radius;
+
+	width: @thumbnail_size;
+	position: relative;
+	padding: 0;
+
+	img {
+		overflow: hidden;
+	}
+
+	.details {
+		float: left;
+		font-size: 12px;
+		padding: 0 10px;
+		margin: 10px 3px 0;
+		display: block;
+		overflow: hidden;
+
+		h6 {
+			width: 100%;
+			float: left;
+			margin: -5px 3px 5px;
+			border-bottom: 1px solid @thumbnail_border_color;
+		}
+	}
+}

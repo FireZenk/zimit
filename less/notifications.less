@@ -1,0 +1,240 @@
+/**
+ * Notifications.less
+ *
+ * Notification styling only.
+ *
+ * @project Zimit Framework
+ * @version 0.9
+ * @author Jorge Garrido Oval, firezenk@gmail.com
+ * @copyright 2012
+ * @license MIT
+ */
+
+/* Creates a desktop-simulated notification with timming, also you can use 'notificaton' semantic element instead of 'div'
+
+	Click here -> <input type="checkbox" class="notification-start" />
+
+    <div class="notification">
+
+      <span class="lsf">save</span>
+      <p>This is a dynamic notification, using only Pure CSS</p>
+      <div class="progress"></div>
+      <a href="#">&times;</a>
+
+    </div>
+*/
+notification, .notification {
+	z-index: 10000;
+	display: none;
+	position: absolute;
+	top: 55px;
+	right: 5px;
+	width: 360px;
+	text-align: left;
+	padding-bottom: 10px;
+	.fix;
+	.border-radius;
+	.opacity(0);
+	.drop-shadow;
+
+	a {
+		position: absolute;
+		font-weight: bold;
+		top: -5px;
+		left: 340px;
+		text-decoration: none;
+		float: right;
+		margin-top: 5px;
+		margin-right: 5px;
+	}
+
+	> p {
+		margin-right: 10px;
+	}
+
+	.progress {
+		width: 0px;
+		height: 4px;
+		position: absolute;
+		bottom: 5px;
+		left: 2%;
+		.border-radius;
+	}
+
+	icon, .lsf {
+		float: left;
+		padding: 10px;	
+	}
+
+	.notif-white;
+}
+
+/* Notification element also supports default theming
+
+	Click here -> <input type="checkbox" class="notification-start" />
+
+    <div class="notification notif-red">
+
+      <span class="lsf">save</span>
+      <p>This is a dynamic notification, using only Pure CSS</p>
+      <div class="progress"></div>
+      <a href="#">&times;</a>
+
+    </div>
+*/
+.notif-red 		{	
+	border: 			darken(@optional_colors_red, 20%);
+	background-color: 	lighten(@optional_colors_red, 20%);
+	color:				darken(@optional_colors_red, 20%);	
+
+	a, icon {color:					darken(@optional_colors_red, 20%);	}	
+	.progress {background-color: 	darken(@optional_colors_red, 20%);	}
+}
+.notif-blue 	{	
+	border:				darken(@optional_colors_blue, 20%);	
+	background-color: 	lighten(@optional_colors_blue, 20%);
+	color:				darken(@optional_colors_blue, 20%);	
+
+	a, icon {color:					darken(@optional_colors_blue, 20%);	}	
+	.progress {background-color: 	darken(@optional_colors_blue, 20%);	}
+}
+.notif-orange 	{	
+	border:				darken(@optional_colors_orange, 20%);	
+	background-color: 	lighten(@optional_colors_orange, 20%);
+	color:				darken(@optional_colors_orange, 20%);
+
+	a, icon {color:					darken(@optional_colors_orange, 20%);	}	
+	.progress {background-color: 	darken(@optional_colors_orange, 20%);	}
+}
+.notif-yellow 	{
+	border:				darken(@optional_colors_yellow, 20%);	
+	background-color: 	lighten(@optional_colors_yellow, 20%);
+	color:				darken(@optional_colors_yellow, 20%);		
+
+	a, icon {color:					darken(@optional_colors_yellow, 20%);	}	
+	.progress {background-color: 	darken(@optional_colors_yellow, 20%);	}
+}
+.notif-green	{
+	border:				darken(@optional_colors_green, 20%);	
+	background-color: 	lighten(@optional_colors_green, 20%);
+	color:				darken(@optional_colors_green, 20%);	
+
+	a, icon {color:					darken(@optional_colors_green, 20%);	}	
+	.progress {background-color: 	darken(@optional_colors_green, 20%);	}
+}
+.notif-brown	{
+	border:				darken(@optional_colors_brown, 20%);	
+	background-color: 	lighten(@optional_colors_brown, 20%);
+	color:				darken(@optional_colors_brown, 20%);	
+
+	a, icon {color:					darken(@optional_colors_brown, 20%);	}	
+	.progress {background-color: 	darken(@optional_colors_brown, 20%);	}	
+}
+.notif-gray		{
+	border:				darken(@optional_colors_gray, 20%);	
+	background-color: 	lighten(@optional_colors_gray, 20%);
+	color:				darken(@optional_colors_gray, 20%);	
+
+	a, icon {color:					darken(@optional_colors_gray, 20%);	}	
+	.progress {background-color: 	darken(@optional_colors_gray, 20%);	}
+}
+.notif-black	{
+	border:				darken(@optional_colors_black, 20%);	
+	background-color: 	lighten(@optional_colors_black, 20%);
+	color:				darken(@optional_colors_black, 20%);
+
+	a, icon {color:					darken(@optional_colors_black, 20%);	}	
+	.progress {background-color: 	darken(@optional_colors_black, 20%);	}	
+}
+.notif-white	{
+	border:				lighten(@optional_colors_white, 20%);	
+	background-color: 	darken(@optional_colors_white, 20%);
+	color:				lighten(@optional_colors_white, 20%);	
+
+	a, icon {color:					lighten(@optional_colors_white, 20%);	}	
+	.progress {background-color: 	lighten(@optional_colors_white, 20%);	}
+}
+input.notification-start:checked {
+	~ .notification {
+		display: block;
+		-webkit-animation: fadeNotif 5s linear forwards;
+		-moz-animation: fadeNotif 5s linear forwards;
+		-o-animation: fadeNotif 5s linear forwards;
+		-ms-animation: fadeNotif 5s linear forwards;
+		animation: fadeNotif 5s linear forwards;
+
+		.progress {
+			-webkit-animation: runNotif 4s linear forwards 0.5s;
+			-moz-animation: runNotif 4s linear forwards 0.5s;
+			-o-animation: runNotif 4s linear forwards 0.5s;
+			-ms-animation: runNotif 4s linear forwards 0.5s;
+			animation: runNotif 4s linear forwards 0.5s;
+		}
+	}
+}
+
+// Notification animations
+@-webkit-keyframes fadeNotif {
+	0% { opacity: 0; }
+	10% { opacity: 1; }
+	90% { opacity: 1; -webkit-transform: translateY(0px);}
+	99% { opacity: 0; -webkit-transform: translateY(-30px);}
+	100% { opacity: 0; }
+}
+
+@-moz-keyframes fadeNotif {
+	0% { opacity: 0; }
+	10% { opacity: 1; }
+	90% { opacity: 1; -moz-transform: translateY(0px);}
+	99% { opacity: 0; -moz-transform: translateY(-30px);}
+	100% { opacity: 0; }
+}
+
+@-o-keyframes fadeNotif {
+	0% { opacity: 0; }
+	10% { opacity: 1; }
+	90% { opacity: 1; -o-transform: translateY(0px);}
+	99% { opacity: 0; -o-transform: translateY(-30px);}
+	100% { opacity: 0; }
+}
+
+@-ms-keyframes fadeNotif {
+	0% { opacity: 0; }
+	10% { opacity: 1; }
+	90% { opacity: 1; -ms-transform: translateY(0px);}
+	99% { opacity: 0; -ms-transform: translateY(-30px);}
+	100% { opacity: 0; }
+}
+
+@keyframes fadeNotif {
+	0% { opacity: 0; }
+	10% { opacity: 1; }
+	90% { opacity: 1; transform: translateY(0px);}
+	99% { opacity: 0; transform: translateY(-30px);}
+	100% { opacity: 0; }
+}
+
+@-webkit-keyframes runNotif {
+	0%{ width: 0%; background: rgba(255,255,255,0.3); }
+	100%{ width: 96%; background: rgba(255,255,255,1); }
+}
+
+@-moz-keyframes runNotif {
+	0%{ width: 0%; background: rgba(255,255,255,0.3); }
+	100%{ width: 96%; background: rgba(255,255,255,1); }
+}
+
+@-o-keyframes runNotif {
+	0%{ width: 0%; background: rgba(255,255,255,0.3); }
+	100%{ width: 96%; background: rgba(255,255,255,1); }
+}
+
+@-ms-keyframes runNotif {
+	0%{ width: 0%; background: rgba(255,255,255,0.3); }
+	100%{ width: 96%; background: rgba(255,255,255,1); }
+}
+
+@keyframes runNotif {
+	0%{ width: 0%; background: rgba(255,255,255,0.3); }
+	100%{ width: 96%; background: rgba(255,255,255,1); }
+}
