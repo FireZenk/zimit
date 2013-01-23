@@ -1,11 +1,4 @@
 Zimit Framework
-<<<<<<< HEAD
-===============
-
-The consistent HTML5 + LESS framework
-
-Read all about Zimit Framework [here](http://firezenk.github.com/zimit "Zimit Framework page")
-=======
 =====
 
 ###Awesome, solid, responsive and complete front-end prototyping framework for web-developers
@@ -29,4 +22,3 @@ Zimit Framework is tested and supported in major modern browsers like: Chrome, F
 
 #####Info, docs & more
 [Zimit Framework](http://firezenk.github.com/zimit/)
->>>>>>> v.0.9.5
