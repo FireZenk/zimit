@@ -5,7 +5,7 @@
  * Final less to css compile file.
  *
  * @project Zimit Framework
- * @version 0.9
+ * @version 0.9.5
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -16,7 +16,7 @@
  * Font definition for all styled texts.
  *
  * @project Zimit Framework
- * @version 0.9
+ * @version 0.9.5
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -238,7 +238,7 @@ section h6:before {
  * Variable definitions.
  *
  * @project Zimit Framework
- * @version 0.9
+ * @version 0.9.5
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -249,7 +249,7 @@ section h6:before {
  * Util LESS mixins.
  *
  * @project Zimit Framework
- * @version 0.9
+ * @version 0.9.5
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -260,7 +260,7 @@ section h6:before {
  * Forked normalize file.
  *
  * @project Zimit Framework
- * @version 0.9
+ * @version 0.9.5
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -511,7 +511,7 @@ thumbnail {
  * Basic skeleton definition.
  *
  * @project Zimit Framework
- * @version 0.9
+ * @version 0.9.5
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -532,8 +532,8 @@ body {
 	<header>Documment header</header>
 */
 header {
-  z-index: 10000;
   position: relative;
+  z-index: 10000;
   margin: auto;
   width: 100%;
   height: auto;
@@ -561,15 +561,15 @@ header {
 	<footer>Documment footer</footer>
 */
 footer {
+  -webkit-box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.25);
   position: relative;
   margin: NaN auto 0;
   padding: 20px;
   height: auto;
   border-top: 1px solid #979797;
   background-color: #e5e0e4;
-  -webkit-box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.25);
-  box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.25);
 }
 /**
  * Components.less
@@ -577,7 +577,7 @@ footer {
  * Components definition: only single component definitions allowed.
  *
  * @project Zimit Framework
- * @version 0.9
+ * @version 0.9.5
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -1906,19 +1906,19 @@ breadcrumb li:after,
   left: 0;
   right: 0;
   top: 0;
-  -webkit-transform: skewx(30deg);
-  -moz-transform: skewx(30deg);
-  -ms-transform: skewx(30deg);
-  -o-transform: skewx(30deg);
+  -webkit-transform: skewX(30deg);
+  -moz-transform: skewX(30deg);
+  -ms-transform: skewX(30deg);
+  -o-transform: skewX(30deg);
 }
 breadcrumb li:after,
 .breadcrumb li:after {
   bottom: 0;
   top: auto;
-  -webkit-transform: skewx(-30deg);
-  -moz-transform: skewx(-30deg);
-  -ms-transform: skewx(-30deg);
-  -o-transform: skewx(-30deg);
+  -webkit-transform: skewX(-30deg);
+  -moz-transform: skewX(-30deg);
+  -ms-transform: skewX(-30deg);
+  -o-transform: skewX(-30deg);
 }
 breadcrumb li:last-of-type:before,
 .breadcrumb li:last-of-type:before,
@@ -2919,7 +2919,7 @@ dropdown li a:hover li a:hover ul li a ul,
 carousel,
 .carousel {
   overflow: hidden;
-  -webkit-transform: translatez(0);
+  -webkit-transform: translateZ(0);
   -webkit-transition: all 0.5s ease-out;
   -moz-transition: all 0.5s ease-out;
   -ms-transition: all 0.5s ease-out;
@@ -2963,7 +2963,7 @@ carousel .slides .inner,
 .carousel .slides .inner {
   width: 500%;
   line-height: 0;
-  -webkit-transform: translatez(0);
+  -webkit-transform: translateZ(0);
   -webkit-transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
   -moz-transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
   -ms-transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
@@ -3263,7 +3263,7 @@ carousel .controls label,
   opacity: 0.3;
   -webkit-opacity: 0.3;
   -moz-opacity: 0.3;
-  -webkit-transform: translatez(0);
+  -webkit-transform: translateZ(0);
   -webkit-transition: opacity 0.2s ease-out;
   -moz-transition: opacity 0.2s ease-out;
   -ms-transition: opacity 0.2s ease-out;
@@ -3367,13 +3367,84 @@ thumbnail .details h6,
   margin: -5px 3px 5px;
   border-bottom: 1px solid #979797;
 }
+/* Audio HTML5 component
+
+	<div class="audio-set">
+     	<audio id="player" src="music/ambient.mp3" loop controlls></audio>
+            
+  		<button onclick="document.getElementById('player').play()" 
+  			class="audio-play"><icon>play</icon></button>
+    	<button onclick="document.getElementById('player').pause()" 
+    		class="audio-pause"><icon>pause</icon></button>
+ 		<button onclick="document.getElementById('player').mute=!document.getElementById('player').mute" 
+ 			class="audio-vdown"><icon>volumeoff</icon></button>
+  		<progress value="document.getElementById('player').currentTime()" 
+  			class="audio-time" max="document.getElementById('player').duration"></progress>
+     	<button onclick="document.getElementById('player').volume-=0.1" 
+     		class="audio-vup"><icon>volumedown</icon></button>
+		<button onclick="document.getElementById('player').volume+=0.1"
+     		class="audio-vdown"><icon>volumeup</icon></button>
+    </div>
+*/
+.audio-set {
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 1px solid #979797;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#e5e0e4));
+  background: -webkit-linear-gradient(top, #ffffff, #e5e0e4);
+  background: -moz-linear-gradient(top, #ffffff, #e5e0e4);
+  background: -ms-linear-gradient(top, #ffffff, #e5e0e4);
+  background: -o-linear-gradient(top, #ffffff, #e5e0e4);
+  background-color: #ffffff;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  border-radius: 5px !important;
+  background-clip: padding-box !important;
+  -moz-background-clip: padding !important;
+  -webkit-background-clip: padding-box !important;
+}
+.audio-set .audio-play {
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 0px;
+}
+.audio-set .audio-pause {
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 0px;
+}
+.audio-set .audio-mute {
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 0px;
+}
+.audio-set .audio-vup {
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 0px;
+}
+.audio-set .audio-vdown {
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 0px;
+}
+.audio-set .audio-currenttime,
+.audio-set .audio-totaltime {
+  color: #979797;
+}
+.audio-set .audio-time {
+  border: 0px;
+  height: 17px;
+  width: 150px;
+}
 /**
  * Responsive.less
  *
  * Media queries file.
  *
  * @project Zimit Framework
- * @version 0.9
+ * @version 0.9.5
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -4091,7 +4162,7 @@ thumbnail .details h6,
  * Progress bars, meters and circle loaders definition.
  *
  * @project Zimit Framework
- * @version 0.9
+ * @version 0.9.5
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -4368,7 +4439,7 @@ meter::-webkit-meter-horizontal-even-less-good-value {
  * Notification styling only.
  *
  * @project Zimit Framework
- * @version 0.9
+ * @version 0.9.5
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -4604,11 +4675,11 @@ input.notification-start:checked ~ .notification .progress {
   }
   90% {
     opacity: 1;
-    -webkit-transform: translatey(0px);
+    -webkit-transform: translateY(0px);
   }
   99% {
     opacity: 0;
-    -webkit-transform: translatey(-30px);
+    -webkit-transform: translateY(-30px);
   }
   100% {
     opacity: 0;
@@ -4623,11 +4694,11 @@ input.notification-start:checked ~ .notification .progress {
   }
   90% {
     opacity: 1;
-    -moz-transform: translatey(0px);
+    -moz-transform: translateY(0px);
   }
   99% {
     opacity: 0;
-    -moz-transform: translatey(-30px);
+    -moz-transform: translateY(-30px);
   }
   100% {
     opacity: 0;
@@ -4642,11 +4713,11 @@ input.notification-start:checked ~ .notification .progress {
   }
   90% {
     opacity: 1;
-    -o-transform: translatey(0px);
+    -o-transform: translateY(0px);
   }
   99% {
     opacity: 0;
-    -o-transform: translatey(-30px);
+    -o-transform: translateY(-30px);
   }
   100% {
     opacity: 0;
@@ -4661,11 +4732,11 @@ input.notification-start:checked ~ .notification .progress {
   }
   90% {
     opacity: 1;
-    -ms-transform: translatey(0px);
+    -ms-transform: translateY(0px);
   }
   99% {
     opacity: 0;
-    -ms-transform: translatey(-30px);
+    -ms-transform: translateY(-30px);
   }
   100% {
     opacity: 0;
@@ -4680,11 +4751,11 @@ input.notification-start:checked ~ .notification .progress {
   }
   90% {
     opacity: 1;
-    transform: translatey(0px);
+    transform: translateY(0px);
   }
   99% {
     opacity: 0;
-    transform: translatey(-30px);
+    transform: translateY(-30px);
   }
   100% {
     opacity: 0;
@@ -4746,7 +4817,7 @@ input.notification-start:checked ~ .notification .progress {
  * Add typographic based icons.
  *
  * @project Zimit Framework
- * @version 0.9
+ * @version 0.9.5
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -4801,7 +4872,7 @@ icon {
  * Desingner debug utils.
  *
  * @project Zimit Framework
- * @version 0.9
+ * @version 0.9.5
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT

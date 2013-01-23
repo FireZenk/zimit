@@ -4,7 +4,7 @@
  * Basic skeleton definition.
  *
  * @project Zimit Framework
- * @version 0.9
+ * @version 0.9.5
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -28,8 +28,8 @@ html,body {
 	<header>Documment header</header>
 */
 header {
-	z-index: 			10000;
 	position: 			relative;
+	z-index: 			10000;
 	margin: 			@total_margin;
 	width: 				@header_width;
 	height: 			@total_height;
@@ -59,11 +59,11 @@ header {
 	<footer>Documment footer</footer>
 */
 footer {
+	.inner-shadow();
 	position: 			relative;
 	margin: 			-@footer_height @total_margin 0;
 	padding:			@footer_padding;
 	height: 			@footer_height;
 	border-top: 		1px solid @footer_border_color;
 	background-color: 	@footer_background;
-	.inner-shadow();
 }

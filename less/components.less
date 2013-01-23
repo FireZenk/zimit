@@ -4,7 +4,7 @@
  * Components definition: only single component definitions allowed.
  *
  * @project Zimit Framework
- * @version 0.9
+ * @version 0.9.5
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -1897,5 +1897,73 @@ thumbnail, .thumbnail {
 			margin: -5px 3px 5px;
 			border-bottom: 1px solid @thumbnail_border_color;
 		}
+	}
+}
+
+/* Audio HTML5 component
+
+	<div class="audio-set">
+     	<audio id="player" src="music/ambient.mp3" loop controlls></audio>
+            
+  		<button onclick="document.getElementById('player').play()" 
+  			class="audio-play"><icon>play</icon></button>
+    	<button onclick="document.getElementById('player').pause()" 
+    		class="audio-pause"><icon>pause</icon></button>
+ 		<button onclick="document.getElementById('player').mute=!document.getElementById('player').mute" 
+ 			class="audio-vdown"><icon>volumeoff</icon></button>
+  		<progress value="document.getElementById('player').currentTime()" 
+  			class="audio-time" max="document.getElementById('player').duration"></progress>
+     	<button onclick="document.getElementById('player').volume-=0.1" 
+     		class="audio-vup"><icon>volumedown</icon></button>
+		<button onclick="document.getElementById('player').volume+=0.1"
+     		class="audio-vdown"><icon>volumeup</icon></button>
+    </div>
+*/
+.audio-set {
+	display: inline-block;
+	padding-left: 5px;
+	padding-right: 5px;
+	border:	 1px solid @audio_border_color;
+	.gradient(@button_gradient_base, @button_gradient_target);
+	.border-radius!important;
+
+	.audio-play {
+		padding-left: 5px;
+		padding-right: 5px;
+		border:	0px;
+	}
+
+	.audio-pause {
+		padding-left: 5px;
+		padding-right: 5px;
+		border:	0px;
+	}
+
+	.audio-mute {
+		padding-left: 5px;
+		padding-right: 5px;
+		border:	0px;
+	}
+
+	.audio-vup {
+		padding-left: 5px;
+		padding-right: 5px;
+		border:	0px;
+	}
+
+	.audio-vdown {
+		padding-left: 5px;
+		padding-right: 5px;
+		border:	0px;
+	}
+
+	.audio-currenttime, .audio-totaltime {
+		color: @audio_nums_color;
+	}
+
+	.audio-time {
+		border: 0px;
+		height: @audio_progress_height;
+		width: @audio_progress_width;
 	}
 }
