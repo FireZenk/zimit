@@ -49,6 +49,7 @@
             <li><a href="#containers">Dynamic containers <icon>right</icon></a>
             <li><a href="#image">Image utils <icon>right</icon></a>
             <li><a href="#bars">Bars <icon>right</icon></a>
+            <li><a href="#audio">Audio <icon>right</icon></a>
             <li><a href="#other">Other utils <icon>right</icon></a>
           </ul>
         </div>
@@ -772,6 +773,53 @@
 
       <div class="row">
         <div class="c9 o3">
+          <section class="top" id="audio">
+            <h2>Audio</h2>
+          </section>
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
+          <p>
+            The new audio component based on HTML5 audio element. For this component you need to add <var>zimit.js</var><br/>
+            <br/>
+
+            <div class="audio-set">
+              <audio id="player" src="music/ambient.mp3" loop controlls="controlls" ontimeupdate="zTimeUpdate()"></audio>
+              
+              <button onclick="zPlay()" class="audio-play"><icon>play</icon></button>
+              <button onclick="zPause()" class="audio-pause"><icon>pause</icon></button>
+              <span id="currenttime" class="audio-currenttime">0:00</span>
+              <progress id="time" class="audio-time" value="0" max="0"></progress>
+              <span id="totaltime" class="audio-totaltime">0:00</span>
+              <button onclick="zMute()" class="audio-mute"><icon>volumeoff</icon></button>
+              <button onclick="zVolumeDown()" class="audio-vdown"><icon>volumedown</icon></button>
+              <button onclick="zVolumeUp()" class="audio-vup"><icon>volumeup</icon></button>
+            </div>
+
+      <pre><code data-language="html">
+      <div class="audio-set">
+        <audio id="player" src="music/ambient.mp3" loop controlls="controlls" ontimeupdate="zTimeUpdate()"></audio>
+              
+        <button onclick="zPlay()" class="audio-play"><icon>play</icon></button>
+        <button onclick="zPause()" class="audio-pause"><icon>pause</icon></button>
+        <span id="currenttime" class="audio-currenttime">0:00</span>
+        <progress id="time" class="audio-time" value="0" max="0"></progress>
+        <span id="totaltime" class="audio-totaltime">0:00</span>
+        <button onclick="zMute()" class="audio-mute"><icon>volumeoff</icon></button>
+        <button onclick="zVolumeDown()" class="audio-vdown"><icon>volumedown</icon></button>
+        <button onclick="zVolumeUp()" class="audio-vup"><icon>volumeup</icon></button>
+      </div>
+      </code></pre>
+
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c9 o3">
           <section class="top" id="other">
             <h2>Other utils</h2>
           </section>
@@ -876,5 +924,7 @@
 
     <!-- Rainbow -->
     <script type="text/javascript" src="js/vendor/rainbow-custom.min.js"></script>
+    <!-- Zimit -->
+    <script type="text/javascript" src="js/zimit.min.js"></script>
   </body>
 </html>
