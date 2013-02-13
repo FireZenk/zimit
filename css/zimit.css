@@ -3453,6 +3453,7 @@ thumbnail .details h6,
  * @copyright 2012
  * @license MIT
  */
+main,
 .content {
   width: 960px;
 }
@@ -3602,6 +3603,7 @@ thumbnail .details h6,
   visibility: hidden;
 }
 @media only screen and (min-width: 1200px) {
+  main,
   .content {
     width: 1200px;
     /* webkit */
@@ -3768,6 +3770,7 @@ thumbnail .details h6,
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 959px) {
+  main,
   .content {
     width: 768px;
     -webkit-animation-property: -webkit-width;
@@ -3927,6 +3930,7 @@ thumbnail .details h6,
   }
 }
 @media only screen and (max-width: 479px) {
+  main,
   .content {
     width: 300px;
     /* webkit */
@@ -3986,6 +3990,7 @@ thumbnail .details h6,
   .row > .o11 {
     margin-left: 0;
   }
+  main .fix,
   .content .fix {
     position: relative;
   }
@@ -4047,6 +4052,7 @@ thumbnail .details h6,
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+  main,
   .content {
     width: 456px;
     -webkit-animation-property: -webkit-width;
@@ -4100,6 +4106,7 @@ thumbnail .details h6,
   .row > .o11 {
     margin-left: 0;
   }
+  main .fix,
   .content .fix {
     position: relative;
   }

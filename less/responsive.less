@@ -15,7 +15,7 @@
 @initial_col:		48px;
 @initial_width:		960px;
 
-.content {
+main, .content {
 	width:	@initial_width; 
 }
 
@@ -81,7 +81,7 @@
 	@base_col:		60px;
 	@base_width:	1200px;
 
-	.content {
+	main, .content {
 		width:	@base_width; 
 		/* webkit */
 		-webkit-animation-property: -webkit-width;
@@ -161,7 +161,7 @@
 	@base_col:		36px;
 	@base_width:	768px;
 
-	.content {
+	main, .content {
 		width:	@base_width; 
 		-webkit-animation-property: -webkit-width;
 		-webkit-animation-property: -webkit-height;
@@ -236,7 +236,7 @@
 
 	@base_width: 300px;
 
-	.content {
+	main, .content {
 		width:@base_width; 
 		/* webkit */
 		-webkit-animation-property: -webkit-width;
@@ -273,7 +273,7 @@
 		margin-left: 0; 
 	}
 
-	.content .fix {	position: relative;	}
+	main .fix, .content .fix {	position: relative;	}
 
 	// Responsive headers
 	h1 { font-size: 3.4em; }
@@ -327,7 +327,7 @@
 
 	@base_width: 456px;
 
-	.content {
+	main, .content {
 		width:@base_width; 
 		-webkit-animation-property: -webkit-width;
 		-webkit-animation-property: -webkit-height;
@@ -361,7 +361,7 @@
 		margin-left: 0; 
 	}
 
-	.content .fix {	position: relative;	}
+	main .fix, .content .fix {	position: relative;	}
 
 	// Responsive headers
 	h1 { font-size: 3.4em; }
