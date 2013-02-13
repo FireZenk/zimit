@@ -36,22 +36,25 @@ header {
 }
  
 /* Main container for the documment, before than 'header' and aften than 'footer'
-
+	
+	<main>Documment content</main>
+	or
 	<div class="content">Documment content</div>
 */
-.content {
+main, .content {
 	margin: 			@total_margin;
 	padding-top: 		@header_height;
 	padding-bottom: 	@footer_height;
 	min-height: 		100%;
 	width: 				@total_width;
 	height: 			@total_height;
-}
-.content:after {
-	display:			block;
-	clear:				both;
-	width: 				@footer_width;
-	height:				@footer_height;
+
+	&:after {
+		display:	block;
+		clear:		both;
+		width: 		@footer_width;
+		height:		@footer_height;
+	}
 }
 
 /* Footer element, new on HTML5;
@@ -61,7 +64,7 @@ header {
 footer {
 	.inner-shadow();
 	position: 			relative;
-	margin: 			-@footer_height @total_margin 0;
+	margin: 			- @footer_height @total_margin 0;
 	padding:			@footer_padding;
 	height: 			@footer_height;
 	border-top: 		1px solid @footer_border_color;
