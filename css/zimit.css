@@ -5,7 +5,7 @@
  * Final less to css compile file.
  *
  * @project Zimit Framework
- * @version 0.9.5
+ * @version 0.9.8
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -16,7 +16,7 @@
  * Font definition for all styled texts.
  *
  * @project Zimit Framework
- * @version 0.9.5
+ * @version 0.9.8
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -238,7 +238,7 @@ section h6:before {
  * Variable definitions.
  *
  * @project Zimit Framework
- * @version 0.9.5
+ * @version 0.9.8
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -249,7 +249,7 @@ section h6:before {
  * Util LESS mixins.
  *
  * @project Zimit Framework
- * @version 0.9.5
+ * @version 0.9.8
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -260,7 +260,7 @@ section h6:before {
  * Forked normalize file.
  *
  * @project Zimit Framework
- * @version 0.9.5
+ * @version 0.9.8
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -511,7 +511,7 @@ thumbnail {
  * Basic skeleton definition.
  *
  * @project Zimit Framework
- * @version 0.9.5
+ * @version 0.9.8
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -581,7 +581,7 @@ footer {
  * Components definition: only single component definitions allowed.
  *
  * @project Zimit Framework
- * @version 0.9.5
+ * @version 0.9.8
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -3442,13 +3442,36 @@ thumbnail .details h6,
   height: 17px;
   width: 150px;
 }
+/* Rating element with stars
+
+	<div class="rating">
+    	<icon>star</icon>
+    	<icon>star</icon>
+    	<icon>star</icon>
+    	<icon>starempty</icon>
+    	<icon>starempty</icon>
+    	<number>10</number> votes
+    </div>
+*/
+.rating {
+  display: block;
+}
+.rating icon,
+.rating .lsf {
+  font-size: 18px;
+}
+.rating number {
+  margin-left: 10px;
+  color: #838E9C;
+  font-size: 12px;
+}
 /**
  * Responsive.less
  *
  * Media queries file.
  *
  * @project Zimit Framework
- * @version 0.9.5
+ * @version 0.9.8
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -4173,7 +4196,7 @@ main,
  * Progress bars, meters and circle loaders definition.
  *
  * @project Zimit Framework
- * @version 0.9.5
+ * @version 0.9.8
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -4450,7 +4473,7 @@ meter::-webkit-meter-horizontal-even-less-good-value {
  * Notification styling only.
  *
  * @project Zimit Framework
- * @version 0.9.5
+ * @version 0.9.8
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -4828,7 +4851,7 @@ input.notification-start:checked ~ .notification .progress {
  * Add typographic based icons.
  *
  * @project Zimit Framework
- * @version 0.9.5
+ * @version 0.9.8
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT

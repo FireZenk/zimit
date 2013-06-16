@@ -4,7 +4,7 @@
  * Components definition: only single component definitions allowed.
  *
  * @project Zimit Framework
- * @version 0.9.5
+ * @version 0.9.8
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -1965,5 +1965,30 @@ thumbnail, .thumbnail {
 		border: 0px;
 		height: @audio_progress_height;
 		width: @audio_progress_width;
+	}
+}
+
+/* Rating element with stars
+
+	<div class="rating">
+    	<icon>star</icon>
+    	<icon>star</icon>
+    	<icon>star</icon>
+    	<icon>starempty</icon>
+    	<icon>starempty</icon>
+    	<number>10</number> votes
+    </div>
+*/
+.rating {
+    display: block;
+
+    icon, .lsf {
+    	font-size: 18px;
+	}
+
+	number {
+	    margin-left: 10px;
+	    color: #838E9C;
+	    font-size: 12px;
 	}
 }

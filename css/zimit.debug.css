@@ -5,7 +5,7 @@
  * Final less to css compile file.
  *
  * @project Zimit Framework
- * @version 0.9.5
+ * @version 0.9.8
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -16,7 +16,7 @@
  * Font definition for all styled texts.
  *
  * @project Zimit Framework
- * @version 0.9.5
+ * @version 0.9.8
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -33,35 +33,35 @@ h4 {
 }
 /* Heading 1;
 
-  <h1>Sample</h1>
+	<h1>Sample</h1>
 */
 h1 {
   font-size: 3.6em;
 }
 /* Heading 2;
 
-  <h2>Sample</h2>
+	<h2>Sample</h2>
 */
 h2 {
   font-size: 3.0em;
 }
 /* Heading 3;
 
-  <h3>Sample</h3>
+	<h3>Sample</h3>
 */
 h3 {
   font-size: 2.4em;
 }
 /* Heading 4;
 
-  <h4>Sample</h4>
+	<h4>Sample</h4>
 */
 h4 {
   font-size: 1.8em;
 }
 /* Heading 5;
 
-  <h5>Sample</h5>
+	<h5>Sample</h5>
 */
 h5 {
   font-weight: 400;
@@ -69,7 +69,7 @@ h5 {
 }
 /* Heading 6;
 
-  <h6>Sample</h6>
+	<h6>Sample</h6>
 */
 h6 {
   font-weight: 400;
@@ -77,18 +77,18 @@ h6 {
 }
 /* Paragraph;
 
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu lorem eget nunc convallis congue. 
-    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-  </p>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu lorem eget nunc convallis congue. 
+		Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+	</p>
 */
 p {
   font-size: 1em;
   font-weight: 400;
 }
 /* Bolds: 'b' and 'strong' elements;
-  
-  <b>Sample with b</b>, <strong>Sample with strong</strong>
+	
+	<b>Sample with b</b>, <strong>Sample with strong</strong>
 */
 b,
 strong {
@@ -98,7 +98,7 @@ strong {
 }
 /* Italic styled elements: 'i', 'cite', and 'time';
 
-  <i>Sample italic</i>, <i>Sample cite</i>, <time>11:00</time>
+	<i>Sample italic</i>, <i>Sample cite</i>, <time>11:00</time>
 */
 i,
 cite,
@@ -108,8 +108,8 @@ time {
   font-style: italic;
 }
 /* Definitions and abbreviations;
-  
-  <dfn>Sample definition</dfn>, <abbr title="Abreviation Sample">AS</abbr>
+	
+	<dfn>Sample definition</dfn>, <abbr title="Abreviation Sample">AS</abbr>
 */
 dfn,
 abbr {
@@ -118,7 +118,7 @@ abbr {
 }
 /* Emphatized text;
 
-  <em>Emphatized text</em>
+	<em>Emphatized text</em>
 */
 em {
   font-size: 1em;
@@ -127,7 +127,7 @@ em {
 }
 /* Stylized bloquote;
 
-  <blockquote>Blockquote sample text</blockquote>
+	<blockquote>Blockquote sample text</blockquote>
 */
 blockquote {
   font-size: 1em;
@@ -136,7 +136,7 @@ blockquote {
 }
 /* Deteled styled elements: 'del' and 's';
 
-  <del>Deleted sample</del>, <s>Deleted sample</s>
+	<del>Deleted sample</del>, <s>Deleted sample</s>
 */
 del,
 s {
@@ -145,7 +145,7 @@ s {
 }
 /* Code presentation text elements: 'kbd' and 'var';
 
-  <kbd>Keyboard element</kb>, <var>Variable element</var>
+	<kbd>Keyboard element</kb>, <var>Variable element</var>
 */
 kbd,
 var {
@@ -154,7 +154,7 @@ var {
 }
 /* Preformated text element;
 
-  <pre>Preformated text sample</pre>
+	<pre>Preformated text sample</pre>
 */
 pre {
   font-size: 1em;
@@ -170,7 +170,7 @@ pre {
 }
 /* Code text element;
 
-  <code>Code sample text</code>
+	<code>Code sample text</code>
 */
 code {
   font-size: 1em;
@@ -186,10 +186,10 @@ code {
 }
 /* List elements, unordered list type;
 
-  <ul>
-    <li>First sample text
-    <li>Second sample text
-  </ul>
+	<ul>
+		<li>First sample text
+		<li>Second sample text
+	</ul>
 */
 ul {
   font-size: 1em;
@@ -200,10 +200,10 @@ ul li {
 }
 /* List elements, ordered list type;
 
-  <ol>
-    <li>First sample text
-    <li>Second sample text
-  </ol>
+	<ol>
+		<li>First sample text
+		<li>Second sample text
+	</ol>
 */
 ol {
   font-size: 1em;
@@ -214,10 +214,10 @@ ol li {
 }
 /* Defines a section with header;
 
-  <section>
-    <h2>Title</h2> <h6>Subttle</h6>
-    <hr/>
-  </section> 
+	<section>
+		<h2>Title</h2> <h6>Subttle</h6>
+		<hr/>
+	</section> 
 */
 section h2 {
   display: inline;
@@ -238,7 +238,7 @@ section h6:before {
  * Variable definitions.
  *
  * @project Zimit Framework
- * @version 0.9.5
+ * @version 0.9.8
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -249,7 +249,7 @@ section h6:before {
  * Util LESS mixins.
  *
  * @project Zimit Framework
- * @version 0.9.5
+ * @version 0.9.8
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -260,7 +260,7 @@ section h6:before {
  * Forked normalize file.
  *
  * @project Zimit Framework
- * @version 0.9.5
+ * @version 0.9.8
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -511,7 +511,7 @@ thumbnail {
  * Basic skeleton definition.
  *
  * @project Zimit Framework
- * @version 0.9.5
+ * @version 0.9.8
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -522,14 +522,14 @@ body {
 }
 /* Helper to fix elements; 
 
-  <div class="fix">Fixed space</div>
+	<div class="fix">Fixed space</div>
 */
 .fix {
   position: fixed;
 }
 /* Header element, new on HTML5;
 
-  <header>Documment header</header>
+	<header>Documment header</header>
 */
 header {
   position: relative;
@@ -539,10 +539,10 @@ header {
   height: auto;
 }
 /* Main container for the documment, before than 'header' and aften than 'footer'
-  
-  <main>Documment content</main>
-  or
-  <div class="content">Documment content</div>
+	
+	<main>Documment content</main>
+	or
+	<div class="content">Documment content</div>
 */
 main,
 .content {
@@ -562,7 +562,7 @@ main:after,
 }
 /* Footer element, new on HTML5;
 
-  <footer>Documment footer</footer>
+	<footer>Documment footer</footer>
 */
 footer {
   -webkit-box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.25);
@@ -581,14 +581,14 @@ footer {
  * Components definition: only single component definitions allowed.
  *
  * @project Zimit Framework
- * @version 0.9.5
+ * @version 0.9.8
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
  */
 /* Separator element: 'hr'; 
 
-  <hr/>
+	<hr/>
 */
 hr {
   border: 0;
@@ -598,7 +598,7 @@ hr {
 }
 /* Ampersand optionally styled;
 
-  <span class="amp">&amp;</span>
+	<span class="amp">&amp;</span>
 */
 span.amp {
   font-style: italic;
@@ -606,7 +606,7 @@ span.amp {
 }
 /* Blockquote detailed styling;
 
-  <blockquote>Sample blockquote text</blockquote>
+	<blockquote>Sample blockquote text</blockquote>
 */
 blockquote {
   margin: 1.5em 10px;
@@ -628,18 +628,18 @@ blockquote p {
 }
 /* Navigantion bar, higly recommended to make the page header menu;
 
-  <nav>
-    <a class="site">Site name</a>
+	<nav>
+		<a class="site">Site name</a>
 
         <input id="expand-util" type="checkbox"/>
         <label for="expand-util"><icon class="expand">menu</icon></label>
 
-    <ul id="menu">
-      <li><a>Section 1</a>
-      <li><a>Section 2</a>
-      <li><a>Section 3</a>
-    </ul>
-  </nav>
+		<ul id="menu">
+			<li><a>Section 1</a>
+			<li><a>Section 2</a>
+			<li><a>Section 3</a>
+		</ul>
+	</nav>
 */
 nav {
   overflow: hidden;
@@ -788,14 +788,14 @@ nav input[type="checkbox"]:checked ~ #menu a:hover {
 }
 /* Styled link element;
 
-  <a href="#">Sample link</a>
+	<a href="#">Sample link</a>
 */
 a {
   color: #aad1f8;
 }
 /* Styled buttons, also with icons; 
 
-  <button>Sample button</button>
+	<button>Sample button</button>
 */
 button {
   margin-top: 2px;
@@ -889,10 +889,10 @@ input[type="reset"]:hover {
 }
 /* Optional coloured styled buttons, also with icons; 
 
-  <button class="btn-red">Sample button</button>
-  <button class="btn-blue">Sample button</button>
-  <button class="btn-orange">Sample button</button>
-  <button class="btn-yellow">Sample button</button>
+	<button class="btn-red">Sample button</button>
+	<button class="btn-blue">Sample button</button>
+	<button class="btn-orange">Sample button</button>
+	<button class="btn-yellow">Sample button</button>
 */
 .btn-red {
   color: #ffffff;
@@ -1049,8 +1049,8 @@ input[type="reset"]:hover {
 }
 /* Checkbox and radio buttons;
 
-  <input type="checkbox"></input>
-  <input type="radio"></input>
+	<input type="checkbox"></input>
+	<input type="radio"></input>
 */
 input[type="checkbox"] {
   padding: 7px;
@@ -1146,9 +1146,9 @@ input[type="radio"]:hover {
 }
 /* Text inputs;
 
-  <input type="text"></input>
-  <input type="password"></input>
-  <input type="number"></input>
+	<input type="text"></input>
+	<input type="password"></input>
+	<input type="number"></input>
 */
 input {
   margin: 2px;
@@ -1169,7 +1169,7 @@ input[type="number"] {
 }
 /* Custom file upload element; 
 
-  <div class="upload">Upload<input type="file"/> <icon>upload</icon> </div>
+	<div class="upload">Upload<input type="file"/> <icon>upload</icon> </div>
 */
 input[type="file"] {
   position: absolute;
@@ -1222,7 +1222,7 @@ input[type="file"] {
 }
 /* Custom selection component;
 
-  <div class="select">
+	<div class="select">
         <select>
             <option selected value="volvo">Volvo</option>
             <option value="saab">Saab</option>
@@ -1282,8 +1282,8 @@ select {
   box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.25);
 }
 /* Dedicated input to web search;
-  
-  <input type="text" class="search" placeholder="Search"/>
+	
+	<input type="text" class="search" placeholder="Search"/>
 */
 .search {
   padding-left: 14px;
@@ -1298,16 +1298,16 @@ select {
 }
 /* Styled input for datalists;
 
-  <div class="datalist">
-      <input list="browsers"/>
+	<div class="datalist">
+    	<input list="browsers"/>
         
         <datalist id="browsers">
-          <option value="Internet Explorer">
-            <option value="Firefox">
-            <option value="Chrome">
-            <option value="Opera">
-          <option value="Safari">
-        </datalist>
+        	<option value="Internet Explorer">
+          	<option value="Firefox">
+          	<option value="Chrome">
+           	<option value="Opera">
+       		<option value="Safari">
+       	</datalist>
         <icon>down</icon> 
     </div>
 */
@@ -1333,7 +1333,7 @@ select {
 }
 /* Round-cornered textarea for large texts;
 
-  <textarea cols="19" rows="2">Sample text...</textarea>
+	<textarea cols="19" rows="2">Sample text...</textarea>
 */
 textarea {
   margin: 2px;
@@ -1350,8 +1350,8 @@ textarea {
   box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.25);
 }
 /* Round-cornered fieldset;
-  
-  <form>
+	
+	<form>
         <fieldset>
           <legend>Personalia:</legend>
           Name: <input type="text" size="30" /><br />
@@ -1371,7 +1371,7 @@ fieldset {
 }
 /* Keygen HTML5 component;
 
-  <keygen name="security"></keygen> 
+	<keygen name="security"></keygen> 
 */
 keygen {
   border: 1px solid #979797;
@@ -1403,7 +1403,7 @@ keygen:hover {
 }
 /* Mark HTML5 component;
 
-  <mark>Marked text</mark>
+	<mark>Marked text</mark>
 */
 mark {
   -webkit-border-radius: 5px;
@@ -1415,8 +1415,8 @@ mark {
 }
 /* Full styled menu item to do horizontal lists or menus;
 
-  <menu type="toolbar">
-    <command type="command" label="New">New</command>
+	<menu type="toolbar">
+		<command type="command" label="New">New</command>
         <command type="command" label="Save">Save</command>
         <command type="command" label="Edit">Edit</command>
         <command type="command" label="Delete">Delete</command>
@@ -1466,11 +1466,11 @@ menu[type="toolbar"] ul li a {
 }
 /* Custom component 'tag' used to mark or emphatize words, you can also use 'span' with 'tag' class;
 
-  <tag color="red">etiqueta</tag>
+	<tag color="red">etiqueta</tag>
     <tag color="blue">etiqueta</tag>
     <tag color="yellow">etiqueta</tag>
     <tag color="green">etiqueta</tag>
-  <tag color="brown">etiqueta</tag>
+	<tag color="brown">etiqueta</tag>
     <tag color="gray">etiqueta</tag>
     <tag color="white">etiqueta</tag>
     <tag color="black">etiqueta</tag>
@@ -1558,7 +1558,7 @@ tag[color="white"],
 }
 /* Custom component to show counters emphatized, you can also use 'span' with 'badge' class;
 
-  <badge color="red">0</badge>
+	<badge color="red">0</badge>
     <badge color="blue">1</badge>
     <badge color="yellow">2</badge>
     <badge color="green">3</badge>
@@ -1651,8 +1651,8 @@ badge[color="white"],
 /* Custom component to show alets or info inline for the user, you can also use 'span' with 'alert' class.
    This component needs to have their width specified;
 
-  <alert class="c7" color="red" data-dismiss="alert"><strong>Red alert!</strong> Alert message text <a href="#">&times;</a></alert>
-  <alert class="c7" color="blue" data-dismiss="alert"><strong>Info</strong> An information message text <a href="#">&times;</a></alert>
+	<alert class="c7" color="red" data-dismiss="alert"><strong>Red alert!</strong> Alert message text <a href="#">&times;</a></alert>
+	<alert class="c7" color="blue" data-dismiss="alert"><strong>Info</strong> An information message text <a href="#">&times;</a></alert>
 */
 alert,
 .alert {
@@ -1780,7 +1780,7 @@ alert a,
 }
 /* Class to show useful tooltips to the users;
 
-  <a class="tooltip" href="#" data-details="Sample tooltip text">Tooltip</a>
+	<a class="tooltip" href="#" data-details="Sample tooltip text">Tooltip</a>
 */
 .tooltip {
   position: relative;
@@ -1854,12 +1854,12 @@ alert a,
 }
 /* Breadcrumb to navigate folders or sites, also you can use 'ul' instead of 'breadcrumb';
 
-  <breadcrumb>
-      <li><a href="#">Grandparent</a>
-      <li><a href="#">Parent</a>
-      <li><a href="#">Child</a>
-      <li><a href="#">Grandchild</a>
-      <li><a href="#">Great-Grandchild</a>
+	<breadcrumb>
+    	<li><a href="#">Grandparent</a>
+    	<li><a href="#">Parent</a>
+    	<li><a href="#">Child</a>
+    	<li><a href="#">Grandchild</a>
+    	<li><a href="#">Great-Grandchild</a>
     </breadcrumb>
 */
 breadcrumb,
@@ -1933,8 +1933,8 @@ breadcrumb li:last-of-type:after,
 /* Useful panels to remark important information, you can also use 'span' with 'panel' class.
    This component needs to have their width specified;
 
-  <panel class="c4">
-      <p class="title">Sample title</p>
+	<panel class="c4">
+    	<p class="title">Sample title</p>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
           Integer vulputate turpis a turpis consectetur euismod. 
@@ -1972,7 +1972,7 @@ panel p,
 /* This component implements tabs whith custom elements: 'tab-host' and 'tab'. 
    You also can usan 'div' instead 'tab-host' and 'tab';
 
-  <tab-host>
+	<tab-host>
        <tab>
            <input type="radio" id="tab-1" name="tab-group-1" checked>
            <label for="tab-1">Tab One</label>
@@ -2114,37 +2114,37 @@ tab-host .tab .tab-content,
 }
 /* A custom collapsable accordion with custom 'acoordion' tab, but you can use 'div' instead;
 
-  <accordion>
-    <div>
-      <input id="ac-1" name="accordion-1" type="checkbox" checked/>
-      <label for="ac-1">One</label>
-      <article>
-        <p>
-          En un lugar de la Mancha, de cuyo nombre no quiero acordarme, 
-          no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero, 
-          adarga antigua, rocín flaco y galgo corredor.
-        </p>
+	<accordion>
+		<div>
+			<input id="ac-1" name="accordion-1" type="checkbox" checked/>
+			<label for="ac-1">One</label>
+			<article>
+				<p>
+					En un lugar de la Mancha, de cuyo nombre no quiero acordarme, 
+					no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero, 
+					adarga antigua, rocín flaco y galgo corredor.
+				</p>
             </article>
         </div>
         <div>
             <input id="ac-2" name="accordion-1" type="checkbox"/>
             <label for="ac-2">Two</label>
             <article>
-              <p>
-                Una olla de algo más vaca que carnero, salpicón las más noches, 
-                duelos y quebrantos los sábados, lantejas los viernes, algún palomino de añadidura los domingos, 
-                consumían las tres partes de su hacienda.
-              </p>
+            	<p>
+            		Una olla de algo más vaca que carnero, salpicón las más noches, 
+            		duelos y quebrantos los sábados, lantejas los viernes, algún palomino de añadidura los domingos, 
+            		consumían las tres partes de su hacienda.
+            	</p>
             </article>
         </div>
         <div>
-          <input id="ac-3" name="accordion-1" type="checkbox" />
-          <label for="ac-3">Three</label>
+        	<input id="ac-3" name="accordion-1" type="checkbox" />
+         	<label for="ac-3">Three</label>
             <article>
-              <p>
-          El resto della concluían sayo de velarte, calzas de velludo para las fiestas, 
-          con sus pantuflos de lo mesmo, y los días de entresemana se honraba con su vellorí de lo más fino.
-              </p>
+            	<p>
+					El resto della concluían sayo de velarte, calzas de velludo para las fiestas, 
+					con sus pantuflos de lo mesmo, y los días de entresemana se honraba con su vellorí de lo más fino.
+            	</p>
             </article>
         </div>
     </accordion>
@@ -2287,60 +2287,60 @@ accordion article p,
 }
 /* Styled and responsive tables, needs that you put 'data-title' on each 'td';
 
-  <table>
-      <thead>
-        <tr>
-          <th>Code</th><th>Company</th><th>Price</th><th>Change</th><th>Change</th>
-          <th>Open</th><th>High</th><th>Low</th><th>Volume</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td data-title="Code">AAC</td>
-          <td data-title="Company">AUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
-          <td data-title="Price" class="numeric">$1.38</td>
-          <td data-title="Change" class="numeric">-0.01</td>
-          <td data-title="Change %" class="numeric">-0.36%</td>
-          <td data-title="Open" class="numeric">$1.39</td>
-          <td data-title="High" class="numeric">$1.39</td>
-          <td data-title="Low" class="numeric">$1.38</td>
-          <td data-title="Volume" class="numeric">9,395</td>
-        </tr>
-        <tr>
-          <td data-title="Code">DAC</td>
-          <td data-title="Company">DUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
-          <td data-title="Price" class="numeric">$1.38</td>
-          <td data-title="Change" class="numeric">-0.02</td>
-          <td data-title="Change %" class="numeric">-0.36%</td>
-          <td data-title="Open" class="numeric">$1.39</td>
-          <td data-title="High" class="numeric">$1.39</td>
-          <td data-title="Low" class="numeric">$1.38</td>
-          <td data-title="Volume" class="numeric">9,395</td>
-        </tr>
-        <tr>
-          <td data-title="Code">EAC</td>
-          <td data-title="Company">EUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
-          <td data-title="Price" class="numeric">$2.38</td>
-          <td data-title="Change" class="numeric">-0.03</td>
-          <td data-title="Change %" class="numeric">-0.36%</td>
-          <td data-title="Open" class="numeric">$1.39</td>
-          <td data-title="High" class="numeric">$1.39</td>
-          <td data-title="Low" class="numeric">$1.38</td>
-          <td data-title="Volume" class="numeric">9,395</td>
-        </tr>
-        <tr>
-          <td data-title="Code">FAC</td>
-          <td data-title="Company">FUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
-          <td data-title="Price" class="numeric">$4.38</td>
-          <td data-title="Change" class="numeric">-0.04</td>
-          <td data-title="Change %" class="numeric">-0.36%</td>
-          <td data-title="Open" class="numeric">$1.39</td>
-          <td data-title="High" class="numeric">$1.39</td>
-          <td data-title="Low" class="numeric">$1.38</td>
-          <td data-title="Volume" class="numeric">9,395</td>
-        </tr>
-      </tbody>
-    </table>
+	<table>
+	    <thead>
+	      <tr>
+	        <th>Code</th><th>Company</th><th>Price</th><th>Change</th><th>Change</th>
+	        <th>Open</th><th>High</th><th>Low</th><th>Volume</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	      <tr>
+	        <td data-title="Code">AAC</td>
+	        <td data-title="Company">AUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
+	        <td data-title="Price" class="numeric">$1.38</td>
+	        <td data-title="Change" class="numeric">-0.01</td>
+	        <td data-title="Change %" class="numeric">-0.36%</td>
+	        <td data-title="Open" class="numeric">$1.39</td>
+	        <td data-title="High" class="numeric">$1.39</td>
+	        <td data-title="Low" class="numeric">$1.38</td>
+	        <td data-title="Volume" class="numeric">9,395</td>
+	      </tr>
+	      <tr>
+	        <td data-title="Code">DAC</td>
+	        <td data-title="Company">DUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
+	        <td data-title="Price" class="numeric">$1.38</td>
+	        <td data-title="Change" class="numeric">-0.02</td>
+	        <td data-title="Change %" class="numeric">-0.36%</td>
+	        <td data-title="Open" class="numeric">$1.39</td>
+	        <td data-title="High" class="numeric">$1.39</td>
+	        <td data-title="Low" class="numeric">$1.38</td>
+	        <td data-title="Volume" class="numeric">9,395</td>
+	      </tr>
+	      <tr>
+	        <td data-title="Code">EAC</td>
+	        <td data-title="Company">EUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
+	        <td data-title="Price" class="numeric">$2.38</td>
+	        <td data-title="Change" class="numeric">-0.03</td>
+	        <td data-title="Change %" class="numeric">-0.36%</td>
+	        <td data-title="Open" class="numeric">$1.39</td>
+	        <td data-title="High" class="numeric">$1.39</td>
+	        <td data-title="Low" class="numeric">$1.38</td>
+	        <td data-title="Volume" class="numeric">9,395</td>
+	      </tr>
+	      <tr>
+	        <td data-title="Code">FAC</td>
+	        <td data-title="Company">FUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
+	        <td data-title="Price" class="numeric">$4.38</td>
+	        <td data-title="Change" class="numeric">-0.04</td>
+	        <td data-title="Change %" class="numeric">-0.36%</td>
+	        <td data-title="Open" class="numeric">$1.39</td>
+	        <td data-title="High" class="numeric">$1.39</td>
+	        <td data-title="Low" class="numeric">$1.38</td>
+	        <td data-title="Volume" class="numeric">9,395</td>
+	      </tr>
+	    </tbody>
+  	</table>
 */
 table {
   width: 100%;
@@ -2361,7 +2361,7 @@ th {
 }
 /* Custom component to show file/folder trees. This component use the root custom element 'tree' but you can also use 'ol';
 
-  <ol>
+	<ol>
       <li>
           <label for="subfolder1"><icon>folder</icon> Folder 1</label>
           <input type="checkbox" id="subfolder1" />
@@ -2504,7 +2504,7 @@ tree li input:checked + ol > li:last-child,
 /* Pagination list-based component;
 
 
-  <ul class="pagination">
+	<ul class="pagination">
       <li class="prev"><a href="">&laquo;</a></li>
       <li class="current"><a href="">1</a></li>
       <li><a href="">2</a></li>
@@ -2578,7 +2578,7 @@ pagination .current,
 }
 /* Modal component to show full-screen messages. You can use 'div' instead 'modal'. (Don't work on docummentation page);
 
-  <a href="#open">Open modal message</a>
+	<a href="#open">Open modal message</a>
     <modal id="open">
       <div>
         <div class="title">
@@ -2717,7 +2717,7 @@ modal .close:hover,
 /* Custom 2 level dropdown component. 
    Default is displayed on the right, but you can set to be deployed on the left using 'left' class on 'ul' element;
 
-  <ul class="dropdown">
+	<ul class="dropdown">
       <li><a class="drop" href="#">Parent</a>
         <ul>
           <li><a href="#">Chlid 1</a>
@@ -2859,65 +2859,65 @@ dropdown li a:hover li a:hover ul li a ul,
 }
 /* A custom carousel with handlers and full responsive with 5 slides support;
 
-  <article class="carousel">
-        <input type="radio" name="slider" id="slide1" checked="">
-        <input type="radio" name="slider" id="slide2">
-        <input type="radio" name="slider" id="slide3">
-        <input type="radio" name="slider" id="slide4">
-        <input type="radio" name="slider" id="slide5">
-        <div class="slides">
-            <div class="inner">
-              <article>
-                  <img src="http://cambelt.co/900x400g"/>
-                  <div class="description">
-                    <b>Sample 1</b>
-                    <i>Description sample 1</i>
-                  </div>
-              </article>
-              <article>
-                  <img src="http://cambelt.co/900x400g"/>
-                  <div class="description">
-                    <b>Sample 2</b>
-                    <i>Description sample 2</i>
-                  </div>
-              </article>
-              <article>
-                  <img src="http://cambelt.co/900x400g"/>
-                  <div class="description">
-                    <b>Sample 3</b>
-                    <i>Description sample 3</i>
-                  </div>
-              </article>
-              <article>
-                  <img src="http://cambelt.co/900x400g"/>
-                  <div class="description">
-                    <b>Sample 4</b>
-                    <i>Description sample 4</i>
-                  </div>
-              </article>
-              <article>
-                  <img src="http://cambelt.co/900x400g"/>
-                  <div class="description">
-                    <b>Sample 5</b>
-                    <i>Description sample 5</i>
-                  </div>
-              </article>
-            </div>
-        </div>
-        <div class="controls">
-          <label for="slide1"></label>
-          <label for="slide2"></label>
-          <label for="slide3"></label>
-          <label for="slide4"></label>
-          <label for="slide5"></label>
-        </div>
-        <div class="active">
-          <label for="slide1"></label>
-          <label for="slide2"></label>
-          <label for="slide3"></label>
-          <label for="slide4"></label>
-          <label for="slide5"></label>
-        </div>
+	<article class="carousel">
+      	<input type="radio" name="slider" id="slide1" checked="">
+      	<input type="radio" name="slider" id="slide2">
+      	<input type="radio" name="slider" id="slide3">
+      	<input type="radio" name="slider" id="slide4">
+      	<input type="radio" name="slider" id="slide5">
+      	<div class="slides">
+          	<div class="inner">
+            	<article>
+              		<img src="http://cambelt.co/900x400g"/>
+              		<div class="description">
+                		<b>Sample 1</b>
+                		<i>Description sample 1</i>
+              		</div>
+           		</article>
+            	<article>
+              		<img src="http://cambelt.co/900x400g"/>
+              		<div class="description">
+                		<b>Sample 2</b>
+                		<i>Description sample 2</i>
+              		</div>
+            	</article>
+            	<article>
+              		<img src="http://cambelt.co/900x400g"/>
+              		<div class="description">
+               			<b>Sample 3</b>
+                		<i>Description sample 3</i>
+              		</div>
+            	</article>
+            	<article>
+              		<img src="http://cambelt.co/900x400g"/>
+              		<div class="description">
+                		<b>Sample 4</b>
+                		<i>Description sample 4</i>
+              		</div>
+            	</article>
+           		<article>
+              		<img src="http://cambelt.co/900x400g"/>
+              		<div class="description">
+                		<b>Sample 5</b>
+                		<i>Description sample 5</i>
+              		</div>
+            	</article>
+          	</div>
+      	</div>
+      	<div class="controls">
+	        <label for="slide1"></label>
+	        <label for="slide2"></label>
+	        <label for="slide3"></label>
+	        <label for="slide4"></label>
+	        <label for="slide5"></label>
+      	</div>
+      	<div class="active">
+	        <label for="slide1"></label>
+	        <label for="slide2"></label>
+	        <label for="slide3"></label>
+	        <label for="slide4"></label>
+	        <label for="slide5"></label>
+      	</div>
     </article>
 */
 carousel,
@@ -3302,12 +3302,12 @@ carousel .active label:hover,
 }
 /* Video wrapper to make the videos full responsive;
 
-  <div class="video">
+	<div class="video">
       <iframe src="http://player.vimeo.com/video/4749536?badge=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
       </iframe> 
       <p>
-        <a href="http://vimeo.com/4749536">Alma</a> from 
-        <a href="http://vimeo.com/alma">Rodrigo Blaas</a> on <a href="http://vimeo.com">Vimeo</a>.
+      	<a href="http://vimeo.com/4749536">Alma</a> from 
+      	<a href="http://vimeo.com/alma">Rodrigo Blaas</a> on <a href="http://vimeo.com">Vimeo</a>.
       </p>
     </div>
 */
@@ -3329,7 +3329,7 @@ carousel .active label:hover,
 }
 /* Component to show beautifull thumbnails;
 
-  <div class="thumbnail">
+	<div class="thumbnail">
        <img src="http://cambelt.co/200x200g">
        <div class="details">
          <h6>Image tittle</h6>
@@ -3373,21 +3373,21 @@ thumbnail .details h6,
 }
 /* Audio HTML5 component
 
-  <div class="audio-set">
-      <audio id="player" src="music/ambient.mp3" loop controlls></audio>
+	<div class="audio-set">
+     	<audio id="player" src="music/ambient.mp3" loop controlls></audio>
             
-      <button onclick="document.getElementById('player').play()" 
-        class="audio-play"><icon>play</icon></button>
-      <button onclick="document.getElementById('player').pause()" 
-        class="audio-pause"><icon>pause</icon></button>
-    <button onclick="document.getElementById('player').mute=!document.getElementById('player').mute" 
-      class="audio-vdown"><icon>volumeoff</icon></button>
-      <progress value="document.getElementById('player').currentTime()" 
-        class="audio-time" max="document.getElementById('player').duration"></progress>
-      <button onclick="document.getElementById('player').volume-=0.1" 
-        class="audio-vup"><icon>volumedown</icon></button>
-    <button onclick="document.getElementById('player').volume+=0.1"
-        class="audio-vdown"><icon>volumeup</icon></button>
+  		<button onclick="document.getElementById('player').play()" 
+  			class="audio-play"><icon>play</icon></button>
+    	<button onclick="document.getElementById('player').pause()" 
+    		class="audio-pause"><icon>pause</icon></button>
+ 		<button onclick="document.getElementById('player').mute=!document.getElementById('player').mute" 
+ 			class="audio-vdown"><icon>volumeoff</icon></button>
+  		<progress value="document.getElementById('player').currentTime()" 
+  			class="audio-time" max="document.getElementById('player').duration"></progress>
+     	<button onclick="document.getElementById('player').volume-=0.1" 
+     		class="audio-vup"><icon>volumedown</icon></button>
+		<button onclick="document.getElementById('player').volume+=0.1"
+     		class="audio-vdown"><icon>volumeup</icon></button>
     </div>
 */
 .audio-set {
@@ -3442,13 +3442,36 @@ thumbnail .details h6,
   height: 17px;
   width: 150px;
 }
+/* Rating element with stars
+
+	<div class="rating">
+    	<icon>star</icon>
+    	<icon>star</icon>
+    	<icon>star</icon>
+    	<icon>starempty</icon>
+    	<icon>starempty</icon>
+    	<number>10</number> votes
+    </div>
+*/
+.rating {
+  display: block;
+}
+.rating icon,
+.rating .lsf {
+  font-size: 18px;
+}
+.rating number {
+  margin-left: 10px;
+  color: #838E9C;
+  font-size: 12px;
+}
 /**
  * Responsive.less
  *
  * Media queries file.
  *
  * @project Zimit Framework
- * @version 0.9.5
+ * @version 0.9.8
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -4173,7 +4196,7 @@ main,
  * Progress bars, meters and circle loaders definition.
  *
  * @project Zimit Framework
- * @version 0.9.5
+ * @version 0.9.8
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -4450,14 +4473,14 @@ meter::-webkit-meter-horizontal-even-less-good-value {
  * Notification styling only.
  *
  * @project Zimit Framework
- * @version 0.9.5
+ * @version 0.9.8
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
  */
 /* Creates a desktop-simulated notification with timming, also you can use 'notificaton' semantic element instead of 'div'
 
-  Click here -> <input type="checkbox" class="notification-start" />
+	Click here -> <input type="checkbox" class="notification-start" />
 
     <div class="notification">
 
@@ -4543,7 +4566,7 @@ notification .progress,
 }
 /* Notification element also supports default theming
 
-  Click here -> <input type="checkbox" class="notification-start" />
+	Click here -> <input type="checkbox" class="notification-start" />
 
     <div class="notification notif-red">
 
@@ -4828,7 +4851,7 @@ input.notification-start:checked ~ .notification .progress {
  * Add typographic based icons.
  *
  * @project Zimit Framework
- * @version 0.9.5
+ * @version 0.9.8
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -4883,7 +4906,7 @@ icon {
  * Desingner debug utils.
  *
  * @project Zimit Framework
- * @version 0.9.5
+ * @version 0.9.8
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
