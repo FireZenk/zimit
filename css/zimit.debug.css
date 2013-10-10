@@ -1,11 +1,11 @@
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,700,400,600&.css");
+@import url("//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,700,400,600&.css");
 /**
  * Zimit.less
  *
  * Final less to css compile file.
  *
  * @project Zimit Framework
- * @version 0.9.8
+ * @version 0.9.9
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -16,10 +16,10 @@
  * Font definition for all styled texts.
  *
  * @project Zimit Framework
- * @version 0.9.8
+ * @version 0.9.9
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
- * @license MIT
+ * @license MIT 
  */
 html,
 body {
@@ -238,7 +238,7 @@ section h6:before {
  * Variable definitions.
  *
  * @project Zimit Framework
- * @version 0.9.8
+ * @version 0.9.9
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -249,7 +249,7 @@ section h6:before {
  * Util LESS mixins.
  *
  * @project Zimit Framework
- * @version 0.9.8
+ * @version 0.9.9
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -260,7 +260,7 @@ section h6:before {
  * Forked normalize file.
  *
  * @project Zimit Framework
- * @version 0.9.8
+ * @version 0.9.9
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -511,7 +511,7 @@ thumbnail {
  * Basic skeleton definition.
  *
  * @project Zimit Framework
- * @version 0.9.8
+ * @version 0.9.9
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -581,7 +581,7 @@ footer {
  * Components definition: only single component definitions allowed.
  *
  * @project Zimit Framework
- * @version 0.9.8
+ * @version 0.9.9
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -3008,6 +3008,11 @@ carousel #slide1:checked ~ .controls label:nth-child(2):before,
   -ms-font-smoothing: antialiased;
   -o-font-smoothing: antialiased;
   font-smoothing: antialiased;
+  -webkit-font-feature-settings: "liga" 1, "dlig" 1;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga" 1, "dlig" 1;
+  -o-font-feature-settings: "liga" 1, "dlig" 1;
+  font-feature-settings: "liga" 1, "dlig" 1;
   content: 'right';
 }
 carousel #slide1:checked ~ .controls label:nth-child(5),
@@ -3031,6 +3036,11 @@ carousel #slide1:checked ~ .controls label:nth-child(5):before,
   -ms-font-smoothing: antialiased;
   -o-font-smoothing: antialiased;
   font-smoothing: antialiased;
+  -webkit-font-feature-settings: "liga" 1, "dlig" 1;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga" 1, "dlig" 1;
+  -o-font-feature-settings: "liga" 1, "dlig" 1;
+  font-feature-settings: "liga" 1, "dlig" 1;
   content: 'left';
 }
 carousel #slide2:checked ~ .slides .inner,
@@ -3063,6 +3073,11 @@ carousel #slide2:checked ~ .controls label:nth-child(3):before,
   -ms-font-smoothing: antialiased;
   -o-font-smoothing: antialiased;
   font-smoothing: antialiased;
+  -webkit-font-feature-settings: "liga" 1, "dlig" 1;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga" 1, "dlig" 1;
+  -o-font-feature-settings: "liga" 1, "dlig" 1;
+  font-feature-settings: "liga" 1, "dlig" 1;
   content: 'right';
 }
 carousel #slide2:checked ~ .controls label:nth-child(1),
@@ -3086,6 +3101,11 @@ carousel #slide2:checked ~ .controls label:nth-child(1):before,
   -ms-font-smoothing: antialiased;
   -o-font-smoothing: antialiased;
   font-smoothing: antialiased;
+  -webkit-font-feature-settings: "liga" 1, "dlig" 1;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga" 1, "dlig" 1;
+  -o-font-feature-settings: "liga" 1, "dlig" 1;
+  font-feature-settings: "liga" 1, "dlig" 1;
   content: 'left';
 }
 carousel #slide3:checked ~ .slides .inner,
@@ -3118,6 +3138,11 @@ carousel #slide3:checked ~ .controls label:nth-child(4):before,
   -ms-font-smoothing: antialiased;
   -o-font-smoothing: antialiased;
   font-smoothing: antialiased;
+  -webkit-font-feature-settings: "liga" 1, "dlig" 1;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga" 1, "dlig" 1;
+  -o-font-feature-settings: "liga" 1, "dlig" 1;
+  font-feature-settings: "liga" 1, "dlig" 1;
   content: 'right';
 }
 carousel #slide3:checked ~ .controls label:nth-child(2),
@@ -3141,6 +3166,11 @@ carousel #slide3:checked ~ .controls label:nth-child(2):before,
   -ms-font-smoothing: antialiased;
   -o-font-smoothing: antialiased;
   font-smoothing: antialiased;
+  -webkit-font-feature-settings: "liga" 1, "dlig" 1;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga" 1, "dlig" 1;
+  -o-font-feature-settings: "liga" 1, "dlig" 1;
+  font-feature-settings: "liga" 1, "dlig" 1;
   content: 'left';
 }
 carousel #slide4:checked ~ .slides .inner,
@@ -3173,6 +3203,11 @@ carousel #slide4:checked ~ .controls label:nth-child(5):before,
   -ms-font-smoothing: antialiased;
   -o-font-smoothing: antialiased;
   font-smoothing: antialiased;
+  -webkit-font-feature-settings: "liga" 1, "dlig" 1;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga" 1, "dlig" 1;
+  -o-font-feature-settings: "liga" 1, "dlig" 1;
+  font-feature-settings: "liga" 1, "dlig" 1;
   content: 'right';
 }
 carousel #slide4:checked ~ .controls label:nth-child(3),
@@ -3196,6 +3231,11 @@ carousel #slide4:checked ~ .controls label:nth-child(3):before,
   -ms-font-smoothing: antialiased;
   -o-font-smoothing: antialiased;
   font-smoothing: antialiased;
+  -webkit-font-feature-settings: "liga" 1, "dlig" 1;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga" 1, "dlig" 1;
+  -o-font-feature-settings: "liga" 1, "dlig" 1;
+  font-feature-settings: "liga" 1, "dlig" 1;
   content: 'left';
 }
 carousel #slide5:checked ~ .slides .inner,
@@ -3228,6 +3268,11 @@ carousel #slide5:checked ~ .controls label:nth-child(1):before,
   -ms-font-smoothing: antialiased;
   -o-font-smoothing: antialiased;
   font-smoothing: antialiased;
+  -webkit-font-feature-settings: "liga" 1, "dlig" 1;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga" 1, "dlig" 1;
+  -o-font-feature-settings: "liga" 1, "dlig" 1;
+  font-feature-settings: "liga" 1, "dlig" 1;
   content: 'right';
 }
 carousel #slide5:checked ~ .controls label:nth-child(4),
@@ -3251,6 +3296,11 @@ carousel #slide5:checked ~ .controls label:nth-child(4):before,
   -ms-font-smoothing: antialiased;
   -o-font-smoothing: antialiased;
   font-smoothing: antialiased;
+  -webkit-font-feature-settings: "liga" 1, "dlig" 1;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga" 1, "dlig" 1;
+  -o-font-feature-settings: "liga" 1, "dlig" 1;
+  font-feature-settings: "liga" 1, "dlig" 1;
   content: 'left';
 }
 carousel .controls,
@@ -3471,7 +3521,7 @@ thumbnail .details h6,
  * Media queries file.
  *
  * @project Zimit Framework
- * @version 0.9.8
+ * @version 0.9.9
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -4196,7 +4246,7 @@ main,
  * Progress bars, meters and circle loaders definition.
  *
  * @project Zimit Framework
- * @version 0.9.8
+ * @version 0.9.9
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -4473,7 +4523,7 @@ meter::-webkit-meter-horizontal-even-less-good-value {
  * Notification styling only.
  *
  * @project Zimit Framework
- * @version 0.9.8
+ * @version 0.9.9
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -4851,7 +4901,7 @@ input.notification-start:checked ~ .notification .progress {
  * Add typographic based icons.
  *
  * @project Zimit Framework
- * @version 0.9.8
+ * @version 0.9.9
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -4881,6 +4931,11 @@ input.notification-start:checked ~ .notification .progress {
   -ms-font-smoothing: antialiased;
   -o-font-smoothing: antialiased;
   font-smoothing: antialiased;
+  -webkit-font-feature-settings: "liga" 1, "dlig" 1;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga" 1, "dlig" 1;
+  -o-font-feature-settings: "liga" 1, "dlig" 1;
+  font-feature-settings: "liga" 1, "dlig" 1;
 }
 /* New elements called 'icon', do the same as .lsf class but more semantic
 
@@ -4899,6 +4954,11 @@ icon {
   -ms-font-smoothing: antialiased;
   -o-font-smoothing: antialiased;
   font-smoothing: antialiased;
+  -webkit-font-feature-settings: "liga" 1, "dlig" 1;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga" 1, "dlig" 1;
+  -o-font-feature-settings: "liga" 1, "dlig" 1;
+  font-feature-settings: "liga" 1, "dlig" 1;
 }
 /**
  * Debug.less
@@ -4906,7 +4966,7 @@ icon {
  * Desingner debug utils.
  *
  * @project Zimit Framework
- * @version 0.9.8
+ * @version 0.9.9
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT

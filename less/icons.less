@@ -4,7 +4,7 @@
  * Add typographic based icons.
  *
  * @project Zimit Framework
- * @version 0.9.8
+ * @version 0.9.9
  * @author Jorge Garrido Oval, firezenk@gmail.com
  * @copyright 2012
  * @license MIT
@@ -24,6 +24,14 @@
   -ms-text-rendering: optimizeLegibility;
   -o-text-rendering: optimizeLegibility;
   text-rendering: optimizeLegibility;
+}
+
+.fontcompat() {
+  -webkit-font-feature-settings: "liga" 1, "dlig" 1;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga" 1, "dlig" 1;
+  -o-font-feature-settings: "liga" 1, "dlig" 1;
+  font-feature-settings: "liga" 1, "dlig" 1;
 }
 
 @font-face {
@@ -47,6 +55,7 @@
   font-family:  'LigatureSymbols';
   .rendering();
   .antialias();
+  .fontcompat();
 }
 
 /* New elements called 'icon', do the same as .lsf class but more semantic
@@ -58,4 +67,5 @@ icon {
   font-family:  'LigatureSymbols';
   .rendering();
   .antialias();
+  .fontcompat();
 }
