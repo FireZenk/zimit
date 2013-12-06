@@ -22,3 +22,7 @@ Zimit Framework is tested and supported in major modern browsers like: Chrome, F
 
 #####Info, docs & more
 [Zimit Framework](http://firezenk.github.com/zimit/)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/FireZenk/zimit/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
